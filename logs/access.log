@@ -1,0 +1,1492 @@
+2023-05-26 18:02:39,995 INFO: User IP Address: 127.0.0.1 
+Method: GET
+Path: /
+Headers: Host: 127.0.0.1:5000
+Connection: keep-alive
+Sec-Ch-Ua: "Google Chrome";v="113", "Chromium";v="113", "Not-A.Brand";v="24"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+
+Request Payload: 
+Response data: <!DOCTYPE html>
+<html>
+<head>
+    <title>API</title>
+    
+<link media="screen" rel="stylesheet" type="text/css" href="/swaggerui/droid-sans.css" />
+<link media="screen" rel="stylesheet" type="text/css" href="/swaggerui/swagger-ui.css" />
+<style>
+html
+{
+  box-sizing: border-box;
+  overflow: -moz-scrollbars-vertical;
+  overflow-y: scroll;
+}
+*,
+*:before,
+*:after
+{
+  box-sizing: inherit;
+}
+
+body {
+  margin:0;
+  background: #fafafa;
+}
+</style>
+
+    <link rel="icon" type="image/png" href="/swaggerui/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/swaggerui/favicon-16x16.png" sizes="16x16" />
+
+</head>
+
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position:absolute;width:0;height:0">
+      <defs>
+        <symbol viewBox="0 0 20 20" id="unlocked">
+              <path d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V6h2v-.801C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8z"></path>
+        </symbol>
+
+        <symbol viewBox="0 0 20 20" id="locked">
+          <path d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8zM12 8H8V5.199C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8z"/>
+        </symbol>
+
+        <symbol viewBox="0 0 20 20" id="close">
+          <path d="M14.348 14.849c-.469.469-1.229.469-1.697 0L10 11.819l-2.651 3.029c-.469.469-1.229.469-1.697 0-.469-.469-.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-.469-.469-.469-1.228 0-1.697.469-.469 1.228-.469 1.697 0L10 8.183l2.651-3.031c.469-.469 1.228-.469 1.697 0 .469.469.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c.469.469.469 1.229 0 1.698z"/>
+        </symbol>
+
+        <symbol viewBox="0 0 20 20" id="large-arrow">
+          <path d="M13.25 10L6.109 2.58c-.268-.27-.268-.707 0-.979.268-.27.701-.27.969 0l7.83 7.908c.268.271.268.709 0 .979l-7.83 7.908c-.268.271-.701.27-.969 0-.268-.269-.268-.707 0-.979L13.25 10z"/>
+        </symbol>
+
+        <symbol viewBox="0 0 20 20" id="large-arrow-down">
+          <path d="M17.418 6.109c.272-.268.709-.268.979 0s.271.701 0 .969l-7.908 7.83c-.27.268-.707.268-.979 0l-7.908-7.83c-.27-.268-.27-.701 0-.969.271-.268.709-.268.979 0L10 13.25l7.418-7.141z"/>
+        </symbol>
+
+
+        <symbol viewBox="0 0 24 24" id="jump-to">
+          <path d="M19 7v4H5.83l3.58-3.59L8 6l-6 6 6 6 1.41-1.41L5.83 13H21V7z"/>
+        </symbol>
+
+        <symbol viewBox="0 0 24 24" id="expand">
+          <path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"/>
+        </symbol>
+
+      </defs>
+    </svg>
+
+    <div id="swagger-ui"></div>
+
+    
+<script src="/swaggerui/swagger-ui-bundle.js"></script>
+<script src="/swaggerui/swagger-ui-standalone-preset.js"></script>
+    <script type="text/javascript">
+        window.onload = function() {
+            const ui = window.ui = new SwaggerUIBundle({
+                url: "/swagger.json",
+                
+                validatorUrl: "" || null,
+                dom_id: "#swagger-ui",
+                presets: [
+                    SwaggerUIBundle.presets.apis,
+                    SwaggerUIStandalonePreset.slice(1) // No Topbar
+                ],
+                plugins: [
+                    SwaggerUIBundle.plugins.DownloadUrl
+                ],
+                
+                displayOperationId: false,
+                displayRequestDuration: false,
+                docExpansion: "none"
+            })
+
+            
+        }
+    </script>
+</body>
+</html>
+Status code: 200
+2023-05-26 18:05:25,103 INFO: User IP Address: 127.0.0.1 
+Method: POST
+Path: /auth/signup
+Headers: Content-Type: application/json
+User-Agent: PostmanRuntime/7.32.2
+Accept: */*
+Postman-Token: 9b427246-1133-429a-b225-e8aaec8fa236
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 115
+
+Request Payload: {
+    "username": "puneet",
+    "email": "puneet@gmail.com",
+    "password": "12345678",
+    "role": "admin"
+}
+Response data: {"id":1}
+
+Status code: 201
+2023-05-26 18:05:33,215 INFO: User IP Address: 127.0.0.1 
+Method: POST
+Path: /auth/login
+Headers: Content-Type: application/json
+User-Agent: PostmanRuntime/7.32.2
+Accept: */*
+Postman-Token: c17d6515-dccd-4ce3-b9d5-fecb0b92aff3
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 59
+
+Request Payload: {
+    "username": "puneet",
+    "password": "12345678"
+}
+Response data: {"access_token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY4NTEwNDUzMywianRpIjoiYWM4ZmEwYWItMmFiNi00ZjM4LWI2MWMtYTA3YjUyZmFhN2M4IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6eyJ1c2VyX2lkIjoxLCJyb2xlIjoiYWRtaW4ifSwibmJmIjoxNjg1MTA0NTMzLCJleHAiOjE2ODUxOTA5MzN9.jfiwSCGwGBEzFjMZG6_DsNO8qwpe1EDDTvcXOpqXTiU","expires":"86400","refresh_token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY4NTEwNDUzMywianRpIjoiNWM2MTQzZWEtNzVhZS00YmU2LTgwMGYtYWZiNmYxMzNmMWQ5IiwidHlwZSI6InJlZnJlc2giLCJzdWIiOnsidXNlcl9pZCI6MSwicm9sZSI6ImFkbWluIn0sIm5iZiI6MTY4NTEwNDUzMywiZXhwIjoxNjg1NzA5MzMzfQ.s5taaMSwF9YK54C24XYzEXWeRzCtKGqGt8forTr9YRU","token_type":"bearer"}
+
+Status code: 200
+2023-06-01 11:32:00,071 INFO: User IP Address: 127.0.0.1 
+Method: GET
+Path: /
+Headers: Host: 127.0.0.1
+Connection: keep-alive
+Sec-Ch-Ua: "Google Chrome";v="113", "Chromium";v="113", "Not-A.Brand";v="24"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+
+Request Payload: 
+Response data: <!DOCTYPE html>
+<html>
+<head>
+    <title>API</title>
+    
+<link media="screen" rel="stylesheet" type="text/css" href="/swaggerui/droid-sans.css" />
+<link media="screen" rel="stylesheet" type="text/css" href="/swaggerui/swagger-ui.css" />
+<style>
+html
+{
+  box-sizing: border-box;
+  overflow: -moz-scrollbars-vertical;
+  overflow-y: scroll;
+}
+*,
+*:before,
+*:after
+{
+  box-sizing: inherit;
+}
+
+body {
+  margin:0;
+  background: #fafafa;
+}
+</style>
+
+    <link rel="icon" type="image/png" href="/swaggerui/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/swaggerui/favicon-16x16.png" sizes="16x16" />
+
+</head>
+
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position:absolute;width:0;height:0">
+      <defs>
+        <symbol viewBox="0 0 20 20" id="unlocked">
+              <path d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V6h2v-.801C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8z"></path>
+        </symbol>
+
+        <symbol viewBox="0 0 20 20" id="locked">
+          <path d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8zM12 8H8V5.199C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8z"/>
+        </symbol>
+
+        <symbol viewBox="0 0 20 20" id="close">
+          <path d="M14.348 14.849c-.469.469-1.229.469-1.697 0L10 11.819l-2.651 3.029c-.469.469-1.229.469-1.697 0-.469-.469-.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-.469-.469-.469-1.228 0-1.697.469-.469 1.228-.469 1.697 0L10 8.183l2.651-3.031c.469-.469 1.228-.469 1.697 0 .469.469.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c.469.469.469 1.229 0 1.698z"/>
+        </symbol>
+
+        <symbol viewBox="0 0 20 20" id="large-arrow">
+          <path d="M13.25 10L6.109 2.58c-.268-.27-.268-.707 0-.979.268-.27.701-.27.969 0l7.83 7.908c.268.271.268.709 0 .979l-7.83 7.908c-.268.271-.701.27-.969 0-.268-.269-.268-.707 0-.979L13.25 10z"/>
+        </symbol>
+
+        <symbol viewBox="0 0 20 20" id="large-arrow-down">
+          <path d="M17.418 6.109c.272-.268.709-.268.979 0s.271.701 0 .969l-7.908 7.83c-.27.268-.707.268-.979 0l-7.908-7.83c-.27-.268-.27-.701 0-.969.271-.268.709-.268.979 0L10 13.25l7.418-7.141z"/>
+        </symbol>
+
+
+        <symbol viewBox="0 0 24 24" id="jump-to">
+          <path d="M19 7v4H5.83l3.58-3.59L8 6l-6 6 6 6 1.41-1.41L5.83 13H21V7z"/>
+        </symbol>
+
+        <symbol viewBox="0 0 24 24" id="expand">
+          <path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"/>
+        </symbol>
+
+      </defs>
+    </svg>
+
+    <div id="swagger-ui"></div>
+
+    
+<script src="/swaggerui/swagger-ui-bundle.js"></script>
+<script src="/swaggerui/swagger-ui-standalone-preset.js"></script>
+    <script type="text/javascript">
+        window.onload = function() {
+            const ui = window.ui = new SwaggerUIBundle({
+                url: "/swagger.json",
+                
+                validatorUrl: "" || null,
+                dom_id: "#swagger-ui",
+                presets: [
+                    SwaggerUIBundle.presets.apis,
+                    SwaggerUIStandalonePreset.slice(1) // No Topbar
+                ],
+                plugins: [
+                    SwaggerUIBundle.plugins.DownloadUrl
+                ],
+                
+                displayOperationId: false,
+                displayRequestDuration: false,
+                docExpansion: "none"
+            })
+
+            
+        }
+    </script>
+</body>
+</html>
+Status code: 200
+2023-06-01 11:32:13,266 INFO: User IP Address: 127.0.0.1 
+Method: GET
+Path: /
+Headers: Host: 127.0.0.1
+Connection: keep-alive
+Cache-Control: max-age=0
+Sec-Ch-Ua: "Google Chrome";v="113", "Chromium";v="113", "Not-A.Brand";v="24"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+
+Request Payload: 
+Response data: <!DOCTYPE html>
+<html>
+<head>
+    <title>API</title>
+    
+<link media="screen" rel="stylesheet" type="text/css" href="/swaggerui/droid-sans.css" />
+<link media="screen" rel="stylesheet" type="text/css" href="/swaggerui/swagger-ui.css" />
+<style>
+html
+{
+  box-sizing: border-box;
+  overflow: -moz-scrollbars-vertical;
+  overflow-y: scroll;
+}
+*,
+*:before,
+*:after
+{
+  box-sizing: inherit;
+}
+
+body {
+  margin:0;
+  background: #fafafa;
+}
+</style>
+
+    <link rel="icon" type="image/png" href="/swaggerui/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/swaggerui/favicon-16x16.png" sizes="16x16" />
+
+</head>
+
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position:absolute;width:0;height:0">
+      <defs>
+        <symbol viewBox="0 0 20 20" id="unlocked">
+              <path d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V6h2v-.801C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8z"></path>
+        </symbol>
+
+        <symbol viewBox="0 0 20 20" id="locked">
+          <path d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8zM12 8H8V5.199C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8z"/>
+        </symbol>
+
+        <symbol viewBox="0 0 20 20" id="close">
+          <path d="M14.348 14.849c-.469.469-1.229.469-1.697 0L10 11.819l-2.651 3.029c-.469.469-1.229.469-1.697 0-.469-.469-.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-.469-.469-.469-1.228 0-1.697.469-.469 1.228-.469 1.697 0L10 8.183l2.651-3.031c.469-.469 1.228-.469 1.697 0 .469.469.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c.469.469.469 1.229 0 1.698z"/>
+        </symbol>
+
+        <symbol viewBox="0 0 20 20" id="large-arrow">
+          <path d="M13.25 10L6.109 2.58c-.268-.27-.268-.707 0-.979.268-.27.701-.27.969 0l7.83 7.908c.268.271.268.709 0 .979l-7.83 7.908c-.268.271-.701.27-.969 0-.268-.269-.268-.707 0-.979L13.25 10z"/>
+        </symbol>
+
+        <symbol viewBox="0 0 20 20" id="large-arrow-down">
+          <path d="M17.418 6.109c.272-.268.709-.268.979 0s.271.701 0 .969l-7.908 7.83c-.27.268-.707.268-.979 0l-7.908-7.83c-.27-.268-.27-.701 0-.969.271-.268.709-.268.979 0L10 13.25l7.418-7.141z"/>
+        </symbol>
+
+
+        <symbol viewBox="0 0 24 24" id="jump-to">
+          <path d="M19 7v4H5.83l3.58-3.59L8 6l-6 6 6 6 1.41-1.41L5.83 13H21V7z"/>
+        </symbol>
+
+        <symbol viewBox="0 0 24 24" id="expand">
+          <path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"/>
+        </symbol>
+
+      </defs>
+    </svg>
+
+    <div id="swagger-ui"></div>
+
+    
+<script src="/swaggerui/swagger-ui-bundle.js"></script>
+<script src="/swaggerui/swagger-ui-standalone-preset.js"></script>
+    <script type="text/javascript">
+        window.onload = function() {
+            const ui = window.ui = new SwaggerUIBundle({
+                url: "/swagger.json",
+                
+                validatorUrl: "" || null,
+                dom_id: "#swagger-ui",
+                presets: [
+                    SwaggerUIBundle.presets.apis,
+                    SwaggerUIStandalonePreset.slice(1) // No Topbar
+                ],
+                plugins: [
+                    SwaggerUIBundle.plugins.DownloadUrl
+                ],
+                
+                displayOperationId: false,
+                displayRequestDuration: false,
+                docExpansion: "none"
+            })
+
+            
+        }
+    </script>
+</body>
+</html>
+Status code: 200
+2023-06-01 12:04:55,039 INFO: User IP Address: 127.0.0.1 
+Method: GET
+Path: /route/index
+Headers: Host: 127.0.0.1:8080
+Connection: keep-alive
+Sec-Ch-Ua: "Google Chrome";v="113", "Chromium";v="113", "Not-A.Brand";v="24"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+
+Request Payload: 
+Response data: {
+  "msg": "Internal Server Error."
+}
+
+Status code: 500
+2023-06-01 12:04:55,240 INFO: User IP Address: 127.0.0.1 
+Method: GET
+Path: /favicon.ico
+Headers: Host: 127.0.0.1:8080
+Connection: keep-alive
+Sec-Ch-Ua: "Google Chrome";v="113", "Chromium";v="113", "Not-A.Brand";v="24"
+Sec-Ch-Ua-Mobile: ?0
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Sec-Ch-Ua-Platform: "Windows"
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://127.0.0.1:8080/route/index
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+
+Request Payload: 
+Response data: {
+  "msg": "Internal Server Error."
+}
+
+Status code: 500
+2023-06-01 12:08:05,900 INFO: User IP Address: 127.0.0.1 
+Method: GET
+Path: /route/index
+Headers: Host: 127.0.0.1:8080
+Connection: keep-alive
+Cache-Control: max-age=0
+Sec-Ch-Ua: "Google Chrome";v="113", "Chromium";v="113", "Not-A.Brand";v="24"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+
+Request Payload: 
+Response data: {
+  "msg": "Internal Server Error."
+}
+
+Status code: 500
+2023-06-01 12:08:06,036 INFO: User IP Address: 127.0.0.1 
+Method: GET
+Path: /favicon.ico
+Headers: Host: 127.0.0.1:8080
+Connection: keep-alive
+Sec-Ch-Ua: "Google Chrome";v="113", "Chromium";v="113", "Not-A.Brand";v="24"
+Sec-Ch-Ua-Mobile: ?0
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Sec-Ch-Ua-Platform: "Windows"
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://127.0.0.1:8080/route/index
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+
+Request Payload: 
+Response data: {
+  "msg": "Internal Server Error."
+}
+
+Status code: 500
+2023-06-01 12:08:07,903 INFO: User IP Address: 127.0.0.1 
+Method: GET
+Path: /route/index
+Headers: Host: 127.0.0.1:8080
+Connection: keep-alive
+Cache-Control: max-age=0
+Sec-Ch-Ua: "Google Chrome";v="113", "Chromium";v="113", "Not-A.Brand";v="24"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+
+Request Payload: 
+Response data: {
+  "msg": "Internal Server Error."
+}
+
+Status code: 500
+2023-06-01 12:08:08,041 INFO: User IP Address: 127.0.0.1 
+Method: GET
+Path: /favicon.ico
+Headers: Host: 127.0.0.1:8080
+Connection: keep-alive
+Sec-Ch-Ua: "Google Chrome";v="113", "Chromium";v="113", "Not-A.Brand";v="24"
+Sec-Ch-Ua-Mobile: ?0
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Sec-Ch-Ua-Platform: "Windows"
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://127.0.0.1:8080/route/index
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+
+Request Payload: 
+Response data: {
+  "msg": "Internal Server Error."
+}
+
+Status code: 500
+2023-06-01 12:11:29,533 INFO: User IP Address: 127.0.0.1 
+Method: GET
+Path: /route/index
+Headers: Host: 127.0.0.1:8080
+Connection: keep-alive
+Cache-Control: max-age=0
+Sec-Ch-Ua: "Google Chrome";v="113", "Chromium";v="113", "Not-A.Brand";v="24"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+
+Request Payload: 
+Response data: {
+  "msg": "Internal Server Error."
+}
+
+Status code: 500
+2023-06-01 12:11:29,535 INFO: User IP Address: 127.0.0.1 
+Method: GET
+Path: /route/index
+Headers: Host: 127.0.0.1:8080
+Connection: keep-alive
+Cache-Control: max-age=0
+Sec-Ch-Ua: "Google Chrome";v="113", "Chromium";v="113", "Not-A.Brand";v="24"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+
+Request Payload: 
+Response data: {
+  "msg": "Internal Server Error."
+}
+
+Status code: 500
+2023-06-01 12:11:31,435 INFO: User IP Address: 127.0.0.1 
+Method: GET
+Path: /route/index
+Headers: Host: 127.0.0.1:8080
+Connection: keep-alive
+Cache-Control: max-age=0
+Sec-Ch-Ua: "Google Chrome";v="113", "Chromium";v="113", "Not-A.Brand";v="24"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+
+Request Payload: 
+Response data: {
+  "msg": "Internal Server Error."
+}
+
+Status code: 500
+2023-06-01 12:11:31,612 INFO: User IP Address: 127.0.0.1 
+Method: GET
+Path: /favicon.ico
+Headers: Host: 127.0.0.1:8080
+Connection: keep-alive
+Sec-Ch-Ua: "Google Chrome";v="113", "Chromium";v="113", "Not-A.Brand";v="24"
+Sec-Ch-Ua-Mobile: ?0
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Sec-Ch-Ua-Platform: "Windows"
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://127.0.0.1:8080/route/index
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+
+Request Payload: 
+Response data: {
+  "msg": "Internal Server Error."
+}
+
+Status code: 500
+2023-06-01 12:11:43,038 INFO: User IP Address: 127.0.0.1 
+Method: GET
+Path: /route/index
+Headers: Host: 127.0.0.1:8080
+Connection: keep-alive
+Cache-Control: max-age=0
+Sec-Ch-Ua: "Google Chrome";v="113", "Chromium";v="113", "Not-A.Brand";v="24"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+
+Request Payload: 
+Response data: {
+  "msg": "Internal Server Error."
+}
+
+Status code: 500
+2023-06-01 12:11:43,139 INFO: User IP Address: 127.0.0.1 
+Method: GET
+Path: /favicon.ico
+Headers: Host: 127.0.0.1:8080
+Connection: keep-alive
+Sec-Ch-Ua: "Google Chrome";v="113", "Chromium";v="113", "Not-A.Brand";v="24"
+Sec-Ch-Ua-Mobile: ?0
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Sec-Ch-Ua-Platform: "Windows"
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://127.0.0.1:8080/route/index
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+
+Request Payload: 
+Response data: {
+  "msg": "Internal Server Error."
+}
+
+Status code: 500
+2023-06-01 12:13:15,933 INFO: User IP Address: 127.0.0.1 
+Method: GET
+Path: /route/index
+Headers: Host: 127.0.0.1:8080
+Connection: keep-alive
+Cache-Control: max-age=0
+Sec-Ch-Ua: "Google Chrome";v="113", "Chromium";v="113", "Not-A.Brand";v="24"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+
+Request Payload: 
+Response data: {
+  "msg": "Internal Server Error."
+}
+
+Status code: 500
+2023-06-01 12:13:16,031 INFO: User IP Address: 127.0.0.1 
+Method: GET
+Path: /favicon.ico
+Headers: Host: 127.0.0.1:8080
+Connection: keep-alive
+Sec-Ch-Ua: "Google Chrome";v="113", "Chromium";v="113", "Not-A.Brand";v="24"
+Sec-Ch-Ua-Mobile: ?0
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Sec-Ch-Ua-Platform: "Windows"
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://127.0.0.1:8080/route/index
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+
+Request Payload: 
+Response data: {
+  "msg": "Internal Server Error."
+}
+
+Status code: 500
+2023-06-01 12:15:06,350 INFO: User IP Address: 127.0.0.1 
+Method: GET
+Path: /route/index
+Headers: Host: 127.0.0.1:8080
+Connection: keep-alive
+Cache-Control: max-age=0
+Sec-Ch-Ua: "Google Chrome";v="113", "Chromium";v="113", "Not-A.Brand";v="24"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+
+Request Payload: 
+Response data: "<html>\n\n<head>\n    <title>Route Optimisation Simulator</title>\n    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css\" rel=\"stylesheet\"\n        integrity=\"sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC\" crossorigin=\"anonymous\">\n    <link rel=\"stylesheet\" href=\"https://use.fontawesome.com/releases/v5.12.1/css/all.css\" crossorigin=\"anonymous\">\n    <script src=\"//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js\"></script>\n\n    <style>\n        .switch {\n            position: relative;\n            display: inline-block;\n            width: 60px;\n            height: 34px;\n        }\n\n        .switch input {\n            display: none;\n        }\n\n        .slider {\n            position: absolute;\n            cursor: pointer;\n            top: 0;\n            left: 0;\n            right: 0;\n            bottom: 0;\n            background-color: #ccc;\n            -webkit-transition: .4s;\n            transition: .4s;\n        }\n\n        .slider:before {\n            position: absolute;\n            content: \"\";\n            height: 26px;\n            width: 26px;\n            left: 4px;\n            bottom: 4px;\n            background-color: white;\n            -webkit-transition: .4s;\n            transition: .4s;\n        }\n\n        input:checked+.slider {\n            background-color: #2196F3;\n        }\n\n        input:focus+.slider {\n            box-shadow: 0 0 1px #2196F3;\n        }\n\n        input:checked+.slider:before {\n            -webkit-transform: translateX(26px);\n            -ms-transform: translateX(26px);\n            transform: translateX(26px);\n        }\n    </style>\n</head>\n\n<body>\n    <h2 style=\"text-align: center;\">ROUTE OPTIMISATION SIMULATOR</h2>\n\n    <!-- <div class=\"mb-3\">\n    <label for=\"formFile\" class=\"form-label\"><b>Upload Distance Matrix</b></label>\n    <input class=\"form-control\" type=\"file\" id=\"formFile\">\n    <button type=\"button\" class=\"btn btn-primary btn-lg\">Large button</button>\n</div> -->\n\n    <div class=\"container\">\n        <div class=\"row\">\n            <div class=\"col-sm\">\n                <label for=\"formFile\" class=\"form-label\" style=\"text-align: center;\"><b>Upload Distance\n                        Matrix</b></label>\n                <div class=\"row\">\n                    <div class=\"col-sm\">\n                        <form action=\"/upload_file_distance_matrix\" method=\"post\" enctype=\"multipart/form-data\"\n                            target=\"hiddenFrame\" id=\"form_upload_distance_coordinates\">\n                            <input class=\"form-control\" type=\"file\" id=\"upload_distance_coordinates\"\n                                name='uploaded_file'>\n                        </form>\n                    </div>\n                    <div class=\"col-sm\">\n                        <form action=\"/download_distance_template\" ,method=\"get\">\n                            <button type=\"submit\" class=\"btn btn-outline-secondary\">Download Template</button>\n                        </form>\n                    </div>\n                </div>\n\n\n            </div>\n            <div class=\"col-sm\">\n                <label for=\"formFile\" class=\"form-label\"><b>Upload Source Coordinates</b></label>\n                <div class=\"row\">\n                    <div class=\"col-sm\">\n                        <form enctype=\"multipart/form-data\" id=\"form_upload_source_coordinates\" target=\"hiddenFrame\"\n                            action=\"/upload_source_coordinates\" method=\"POST\">\n                            <input class=\"form-control\" type=\"file\" id=\"upload_source_coordinates\" name='uploaded_file'>\n                        </form>\n                    </div>\n                    <div class=\"col-sm\">\n                        <form action=\"/download_source_template\" ,method=\"get\">\n                            <button type=\"submit\" class=\"btn btn-outline-secondary\">Download Template</button>\n                        </form>\n                    </div>\n                </div>\n            </div>\n            <div class=\"col-sm\">\n                <label for=\"formFile\" class=\"form-label\"><b>Upload Destination Coordinates</b></label>\n                <div class=\"row\">\n                    <div class=\"col-sm\">\n                        <form enctype=\"multipart/form-data\" id=\"form_upload_destination_coordinates\"\n                            target=\"hiddenFrame\" action=\"/upload_destination_coordinates\" method=\"POST\">\n\n                            <input class=\"form-control\" type=\"file\" id=\"upload_destination_coordinates\"\n                                name=\"uploaded_file\">\n                        </form>\n                    </div>\n                    <div class=\"col-sm\">\n                        <form action=\"/download_destination_template\" ,method=\"get\">\n                            <button type=\"submit\" class=\"btn btn-outline-secondary\">Download Template</button>\n                        </form>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n\n\n    <div class=\"container\" style=\"padding-top: 2%;\">\n        <div class=\"row\">\n            <div class=\"col-sm\">\n                <b>Choose Objective</b>\n            </div>\n            <div class=\"col-sm\">\n                <div class=\"form-check form-check-inline\">\n                    <input class=\"form-check-input\" type=\"radio\" name=\"minimise_cost\" id=\"minimise_cost\"\n                        value=\"minimise_cost\">\n                    <label class=\"form-check-label\" for=\"inlineRadioObjective\">Minimise Cost</label>\n                </div>\n            </div>\n            <div class=\"col-sm\">\n                <div class=\"form-check form-check-inline\">\n                    <input class=\"form-check-input\" type=\"radio\" name=\"minimise_cost\" id=\"minimise_time\"\n                        value=\"minimise_time\">\n                    <label class=\"form-check-label\" for=\"inlineRadioObjective\">Minimise Time</label>\n                </div>\n            </div>\n        </div>\n    </div>\n\n\n\n    <div class=\"container\" style=\"padding-top: 2%;\">\n        <div class=\"row\">\n            <div class=\"col-sm\">\n                <b>List round-trip distance/time</b>\n            </div>\n            <div class=\"col-sm\">\n                <div class=\"form-check form-check-inline\">\n                    <input class=\"form-check-input\" type=\"radio\" name=\"round_trip\" id=\"inlineRadio1Roundtrip\"\n                        value=\"Yes\" onclick=\"EnableRoundTrip()\">\n                    <label class=\"form-check-label\" for=\"inlineRadio2\">Yes</label>\n                </div>\n            </div>\n            <div class=\"col-sm\">\n                <div class=\"form-check form-check-inline\">\n                    <input class=\"form-check-input\" type=\"radio\" name=\"round_trip\"\n                        id=\"inlineRadio1RoundTripDisable\" value=\"No\" onclick=\"DisableRoundTrip()\">\n                    <label class=\"form-check-label\" for=\"inlineRadio2\">No</label>\n                </div>\n            </div>\n        </div>\n    </div>\n\n    <div class=\"container\" style=\"padding-top: 1.5%;\">\n        <form>\n            <div class=\"row\">\n                <div class=\"col\">\n                    <b><label>Specify atleast one of the following:</label></b>\n                </div>\n                <div class=\"col\">\n                    <!-- <label for=\"inlineGridName\" class=\"sr-only\">Name</label> -->\n                    <input style=\"padding-left: 10%;padding-right: 10%;\" type=\"text\" class=\"form-control\"\n                        id=\"maxTripDistance\" placeholder=\"Max Trip Distance(KM)\">\n                </div>\n                <div class=\"col\">\n                    <!-- <label for=\"inlineGridEmail\" class=\"sr-only\">Email</label> -->\n                    <input style=\"padding-left: 10%;padding-right: 10%;\" type=\"text\" class=\"form-control\"\n                        id=\"maxTripDuration\" placeholder=\"Max Trip Duration(hrs)\" disabled=\"disabled\">\n                </div>\n            </div>\n        </form>\n    </div>\n\n\n\n    <div class=\"container\" style=\"padding-top: 1.5%;\">\n        <form>\n            <div class=\"row\">\n                <div class=\"col\">\n\n\n                    <b><label>Specify destination service time parameters:</label></b>\n                </div>\n                <div class=\"col\">\n                    <!-- <label for=\"inlineGridName\" class=\"sr-only\">Name</label> -->\n                    <input style=\"padding-left: 10%;padding-right: 10%;\" type=\"text\" class=\"form-control\"\n                        id=\"inlineGridNameFixedComponent\" placeholder=\"Fixed Component\">\n                </div>\n                <div class=\"col\">\n                    <label for=\"inlineGridEmail\"><b>Variable Component</b></label>\n\n                </div>\n\n\n                <div class=\"col\">\n                    <div class=\"form-check form-check-inline\">\n                        <input class=\"form-check-input\" type=\"radio\" name=\"variable_component\" id=\"perOrderRadio\"\n                            value=\"option2\" onclick=\"EnablePerOrder()\">\n                        <label class=\"form-check-label\" for=\"perOrderRadio\">per order</label>\n                    </div>\n                    <input style=\"padding-left: 10%;padding-right: 10%;\" type=\"text\" class=\"form-control\" id=\"perOrder\"\n                        placeholder=\"mins\" disabled=\"disabled\">\n                </div>\n                <div class=\"col\">\n                    <div class=\"form-check form-check-inline\">\n                        <input class=\"form-check-input\" type=\"radio\" name=\"variable_component\" id=\"perHandlingUnitRadio\"\n                            value=\"option2\" onclick=\"EnablePerHandlingUnit()\">\n                        <label class=\"form-check-label\" for=\"perHandlingUnitRadio\">per handling unit</label>\n                    </div>\n                    <input style=\"padding-left: 10%;padding-right: 10%;\" type=\"text\" class=\"form-control\"\n                        id=\"perHandlingUnit\" placeholder=\"mins\" disabled=\"disabled\">\n                </div>\n            </div>\n        </form>\n    </div>\n\n\n    <div class=\"container\">\n        <div class=\"row\">\n            <div class=\"col-sm\">\n                <b>Upload Fleet Details</b><i>(vehicle type,no. of vehicles,fixed and variable costs,capacities,avg.\n                    speed and additional characteristics)</i>\n            </div>\n            <div class=\"col-sm\">\n                <form enctype=\"multipart/form-data\" id=\"form_upload_fleet_details\" target=\"hiddenFrame\"\n                    action=\"/upload_fleet_details\" method=\"POST\">\n\n                    <input class=\"form-control\" type=\"file\" id=\"upload_fleet_details\" name=\"uploaded_file\">\n                </form>\n            </div>\n            <div class=\"col-sm\">\n                <form action=\"/download_fleet_template\" ,method=\"get\">\n                    <button type=\"submit\" class=\"btn btn-outline-secondary\">Download Template</button>\n                </form>\n            </div>\n        </div>\n    </div>\n\n\n    <div class=\"container\" style=\"padding-top: 2%;\">\n        <div class=\"row\">\n            <div class=\"col-sm\">\n                <b>Assume infinite fleet size</b><i>(if \"Yes\" no. of vehicles of each type,if specified, will be\n                    ignored)</i>\n            </div>\n            <div class=\"col-sm\">\n                <div class=\"form-check form-check-inline\">\n                    <input class=\"form-check-input\" type=\"radio\" name=\"infinite_fleet_size\" id=\"yes_infinte_fleet_size\"\n                        value=\"option2\">\n                    <label class=\"form-check-label\" for=\"inlineRadio2\">Yes</label>\n                </div>\n            </div>\n            <div class=\"col-sm\">\n                <div class=\"form-check form-check-inline\">\n                    <input class=\"form-check-input\" type=\"radio\" name=\"infinite_fleet_size\" id=\"inlineRadio1\"\n                        value=\"option2\">\n                    <label class=\"form-check-label\" for=\"inlineRadio2\">No</label>\n                </div>\n            </div>\n        </div>\n    </div>\n\n\n    <div class=\"container\" style=\"padding-top: 2%;\">\n        <div class=\"row\">\n            <div class=\"col-sm\">\n                <b>Specify vehicle loading contraints</b><i> (atleast one of the following 3 should be active)</i>\n            </div>\n        </div>\n    </div>\n\n\n    <div class=\"container\">\n        <div class=\"row\">\n            <div class=\"col-sm\">\n                <div class=\"form-check form-switch\">\n                    <input class=\"form-check-input\" type=\"checkbox\" role=\"switch\" id=\"vehicle_weight_capacity\">\n                    <label class=\"form-check-label\" for=\"vehicle_weight_capacity\">Vehicle weight capacity</label>\n                </div>\n            </div>\n            <div class=\"col-sm\">\n                <div class=\"form-check form-switch\">\n                    <input class=\"form-check-input\" type=\"checkbox\" role=\"switch\" id=\"vehicle_volume_capacity\">\n                    <label class=\"form-check-label\" for=\"vehicle_volume_capacity\">Vehicle volumetric capacity</label>\n                </div>\n            </div>\n            <div class=\"col-sm\">\n                <div class=\"form-check form-switch\">\n                    <input class=\"form-check-input\" type=\"checkbox\" role=\"switch\" id=\"vehicle_max_order_count\">\n                    <label class=\"form-check-label\" for=\"vehicle_max_order_count\">Vehicle max order count</label>\n                </div>\n            </div>\n        </div>\n    </div>\n\n\n\n\n    <div class=\"container\" style=\"padding-top:2%;\">\n        <div class=\"row\">\n            <div class=\"col-sm\">\n                <b>Upload vehicle availability times</b><i>(optional,if not specified it will be assumed that all\n                    vehicles are available for the whole day)</i>\n            </div>\n            <div class=\"col-sm\">\n                <form enctype=\"multipart/form-data\" id=\"form_upload_vehicle_availability_times\" target=\"hiddenFrame\"\n                    action=\"/upload_vehicle_availability\" method=\"POST\">\n\n                    <input class=\"form-control\" type=\"file\" id=\"upload_vehicle_availability_times\" name=\"uploaded_file\">\n                </form>\n            </div>\n            <div class=\"col-sm\">\n                <form action=\"/download_vehicle_template\" ,method=\"get\">\n                    <button type=\"submit\" class=\"btn btn-outline-secondary\">Download Template</button>\n                </form>\n            </div>\n        </div>\n    </div>\n\n\n\n    <div class=\"container\" style=\"padding-top:2%;\">\n        <div class=\"row\">\n            <div class=\"col-sm\">\n                <b>Upload order details</b><i>(destination, weight, volume, preferred time window, special vehicle\n                    requirements etc.)</i>\n            </div>\n            <div class=\"col-sm\">\n                <form enctype=\"multipart/form-data\" id=\"form_upload_order_details\" target=\"hiddenFrame\"\n                    action=\"/upload_order_details\" method=\"POST\">\n\n                    <input class=\"form-control\" type=\"file\" id=\"upload_order_details\" name=\"uploaded_file\">\n                </form>\n            </div>\n            <div class=\"col-sm\">\n                <form action=\"/download_order_template\" ,method=\"get\">\n                    <button type=\"submit\" class=\"btn btn-outline-secondary\">Download Template</button>\n                </form>\n            </div>\n        </div>\n    </div>\n\n    <div class=\"container\" style=\"padding-top: 2%;\">\n        <div class=\"row\">\n            <div class=\"col-sm\">\n\n            </div>\n            <div class=\"col-lg\">\n                <button type=\"button\" class=\"btn btn-primary btn-lg btn-block\" onclick=\"GenerateConfig()\"><b>Generate Route Plan</b></button>\n            </div>\n            <div class=\"col-lg\">\n                <form action=\"/view_plan\" ,method=\"get\">\n                    <button type=\"button\" class=\"btn btn-primary btn-lg btn-block\"><b>View/Download Plan</b></button>\n                </form>\n            </div>\n            <div class=\"col-sm\">\n\n            </div>\n        </div>\n    </div>\n\n\n    <!--Jquery Cdn -->\n    <script src=\"https://code.jquery.com/jquery-3.5.1.js\"\n        integrity=\"sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=\" crossorigin=\"anonymous\"></script>\n\n    <!-- <form method=\"post\" id=\"todo-form\">\n        <input type=\"text\" name=\"todo\" id=\"todo\">\n        <button type=\"submit\">submit</button>\n    </form> -->\n\n    <script type=\"text/javascript\">\n        function EnableRoundTrip() {\n            var others = document.getElementById(\"inlineRadio1Roundtrip\");\n            var otherlan = document.getElementById(\"maxTripDuration\");\n            otherlan.disabled = others.checked ? false : true;\n            otherlan.value = \"\";\n            if (!otherlan.disabled) {\n                otherlan.focus();\n            }\n        }\n\n\n        function DisableRoundTrip() {\n            var others = document.getElementById(\"inlineRadio1RoundTripDisable\");\n            var otherlan = document.getElementById(\"maxTripDuration\");\n            otherlan.disabled = others.checked ? true : false;\n            otherlan.value = \"\";\n            if (!otherlan.disabled) {\n                otherlan.focus();\n            }\n        }\n\n\n        function EnablePerOrder() {\n            var others = document.getElementById(\"perOrderRadio\");\n            var otherlan = document.getElementById(\"perOrder\");\n            var otherlan2 = document.getElementById(\"perHandlingUnit\");\n\n            // console.log(otherlan)\n            otherlan.disabled = others.checked ? false : true;\n            otherlan.value = \"\";\n            if (!otherlan.disabled) {\n                otherlan.focus();\n            }\n\n            otherlan2.disabled = others.checked ? true : false;\n            otherlan2.value = \"\";\n            if (!otherlan2.disabled) {\n                otherlan2.focus();\n            }\n        }\n\n        function EnablePerHandlingUnit() {\n            var others = document.getElementById(\"perHandlingUnitRadio\");\n            var otherlan = document.getElementById(\"perHandlingUnit\");\n\n            var otherlan2 = document.getElementById(\"perOrder\");\n\n            // console.log(otherlan)\n            otherlan.disabled = others.checked ? false : true;\n            otherlan.value = \"\";\n            if (!otherlan.disabled) {\n                otherlan.focus();\n            }\n\n            otherlan2.disabled = others.checked ? true : false;\n            otherlan2.value = \"\";\n            if (!otherlan2.disabled) {\n                otherlan2.focus();\n            }\n        }\n\n\n        document.getElementById(\"upload_source_coordinates\").onchange = function () {\n            document.getElementById(\"form_upload_source_coordinates\").submit();\n            console.log(\"source coordinates submitted successfully\")\n\n        };\n\n        document.getElementById(\"upload_distance_coordinates\").onchange = function () {\n            document.getElementById(\"form_upload_distance_coordinates\").submit();\n            console.log(\"source coordinates submitted successfully\")\n\n        };\n\n        document.getElementById(\"upload_destination_coordinates\").onchange = function () {\n            document.getElementById(\"form_upload_destination_coordinates\").submit();\n            console.log(\"destination coordinates submitted successfully\")\n\n        };\n\n        document.getElementById(\"upload_fleet_details\").onchange = function () {\n            document.getElementById(\"form_upload_fleet_details\").submit();\n            console.log(\"fleet details submitted successfully\")\n\n        };\n\n\n        document.getElementById(\"upload_vehicle_availability_times\").onchange = function () {\n            document.getElementById(\"form_upload_vehicle_availability_times\").submit();\n            console.log(\"fleet details submitted successfully\")\n\n        };\n\n\n\n        // function doFunction() {\n        //     const name = document.getElementById(\"upload_vehicle_availability_times\").innerHTML\n\n        //     $.ajax({\n        //         url: '/upload_vehicle_availability',\n        //         type: 'POST',\n        //         data: {\n        //             name: name\n        //         },\n        //         success: function (response) {\n        //         },\n        //         error: function (response) {\n        //         }\n        //     });\n\n        // };\n\n\n\n        document.getElementById(\"upload_order_details\").onchange = function () {\n            document.getElementById(\"form_upload_order_details\").submit();\n            console.log(\"fleet details submitted successfully\")\n\n        };\n\n\n\n        function GenerateConfig() {\n            config = {}\n            objective = {}\n            objective['minimize_cost']=document.getElementById('minimise_cost').checked\n            objective['minimise_time'] =document.getElementById('minimise_time').checked\n\n            config['objective'] = objective\n\n            config[\"limit_distance_time\"] = document.getElementById('inlineRadio1Roundtrip').checked\n\n            maxTripDistance = document.getElementById(\"maxTripDistance\").value\n            maxTripDuration = document.getElementById(\"maxTripDuration\").value\n            limit_distance_time_param = [{\"max_distance_travelled\":maxTripDistance},{\"max_duration_travelled\":maxTripDuration}]\n            \n            config[\"limit_distance_time_param\"] = limit_distance_time_param\n\n            service_time = {}\n            service_time['fixed_componenet'] = document.getElementById('inlineGridNameFixedComponent').value\n            service_time[\"variable\"] = {\n                \"per_order\":document.getElementById(\"perOrder\").value,\n                \"per_handling_unit\":document.getElementById(\"perHandlingUnit\").value\n\n            }\n\n            config['service_time'] = service_time\n            config['infinite_fleet_size'] = document.getElementById(\"yes_infinte_fleet_size\").checked\n\n            config[\"loading_constraint\"] = {\n                 \"vehicle_weight_capacity\": document.getElementById(\"vehicle_weight_capacity\").checked,\n                 \"vehicle_volume_capacity\": document.getElementById(\"vehicle_volume_capacity\").checked,\n                 \"vehicle_order_capacity\":  document.getElementById(\"vehicle_max_order_count\").checked\n            }\n\n            console.log(config) \n\n            $.ajax({\n            url: '/generate_route_plan',\n            type: 'POST',\n            contentType:'application/json',\n            data:JSON.stringify({config}),\n            success: function (response) {\n                console.log(response)\n            },\n            error: function (response) {\n                console.log(response)\n            }\n        });\n\n        }\n\n\n    </script>\n\n\n    <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js\"\n        integrity=\"sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM\"\n        crossorigin=\"anonymous\"></script>\n\n    <iframe name=\"hiddenFrame\" width=\"0\" height=\"0\" border=\"0\" \"></iframe>\n\n</body>\n\n</html>"
+
+Status code: 200
+2023-06-01 12:15:06,468 INFO: User IP Address: 127.0.0.1 
+Method: GET
+Path: /favicon.ico
+Headers: Host: 127.0.0.1:8080
+Connection: keep-alive
+Sec-Ch-Ua: "Google Chrome";v="113", "Chromium";v="113", "Not-A.Brand";v="24"
+Sec-Ch-Ua-Mobile: ?0
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Sec-Ch-Ua-Platform: "Windows"
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://127.0.0.1:8080/route/index
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+
+Request Payload: 
+Response data: {
+  "msg": "Internal Server Error."
+}
+
+Status code: 500
+2023-06-01 12:40:43,688 INFO: User IP Address: 127.0.0.1 
+Method: GET
+Path: /route/index
+Headers: Host: 127.0.0.1:8080
+Connection: keep-alive
+Cache-Control: max-age=0
+Sec-Ch-Ua: "Google Chrome";v="113", "Chromium";v="113", "Not-A.Brand";v="24"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+
+Request Payload: 
+Response data: "<!DOCTYPE html>\n<html>\n  <head>\n    <title></title>\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <!-- Bootstrap -->\n    <link href=\"//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css\" rel=\"stylesheet\">\n  </head>\n  <body>\n    \n    \n\n    \n    <script src=\"//cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js\"></script>\n    <script src=\"//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js\"></script>\n  </body>\n</html>\n"
+
+Status code: 200
+2023-06-01 12:40:43,827 INFO: User IP Address: 127.0.0.1 
+Method: GET
+Path: /favicon.ico
+Headers: Host: 127.0.0.1:8080
+Connection: keep-alive
+Sec-Ch-Ua: "Google Chrome";v="113", "Chromium";v="113", "Not-A.Brand";v="24"
+Sec-Ch-Ua-Mobile: ?0
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Sec-Ch-Ua-Platform: "Windows"
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://127.0.0.1:8080/route/index
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+
+Request Payload: 
+Response data: {
+  "msg": "Internal Server Error."
+}
+
+Status code: 500
+2023-06-01 12:42:00,325 INFO: User IP Address: 127.0.0.1 
+Method: GET
+Path: /route/index
+Headers: Host: 127.0.0.1:8080
+Connection: keep-alive
+Cache-Control: max-age=0
+Sec-Ch-Ua: "Google Chrome";v="113", "Chromium";v="113", "Not-A.Brand";v="24"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+
+Request Payload: 
+Response data: "\n<html>\n\n<head>\n    <title>Route Optimisation Simulator</title>\n    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css\" rel=\"stylesheet\"\n        integrity=\"sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC\" crossorigin=\"anonymous\">\n    <link rel=\"stylesheet\" href=\"https://use.fontawesome.com/releases/v5.12.1/css/all.css\" crossorigin=\"anonymous\">\n    <script src=\"//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js\"></script>\n\n    <style>\n        .switch {\n            position: relative;\n            display: inline-block;\n            width: 60px;\n            height: 34px;\n        }\n\n        .switch input {\n            display: none;\n        }\n\n        .slider {\n            position: absolute;\n            cursor: pointer;\n            top: 0;\n            left: 0;\n            right: 0;\n            bottom: 0;\n            background-color: #ccc;\n            -webkit-transition: .4s;\n            transition: .4s;\n        }\n\n        .slider:before {\n            position: absolute;\n            content: \"\";\n            height: 26px;\n            width: 26px;\n            left: 4px;\n            bottom: 4px;\n            background-color: white;\n            -webkit-transition: .4s;\n            transition: .4s;\n        }\n\n        input:checked+.slider {\n            background-color: #2196F3;\n        }\n\n        input:focus+.slider {\n            box-shadow: 0 0 1px #2196F3;\n        }\n\n        input:checked+.slider:before {\n            -webkit-transform: translateX(26px);\n            -ms-transform: translateX(26px);\n            transform: translateX(26px);\n        }\n    </style>\n</head>\n\n<body>\n    <h2 style=\"text-align: center;\">ROUTE OPTIMISATION SIMULATOR</h2>\n\n    <!-- <div class=\"mb-3\">\n    <label for=\"formFile\" class=\"form-label\"><b>Upload Distance Matrix</b></label>\n    <input class=\"form-control\" type=\"file\" id=\"formFile\">\n    <button type=\"button\" class=\"btn btn-primary btn-lg\">Large button</button>\n</div> -->\n\n    <div class=\"container\">\n        <div class=\"row\">\n            <div class=\"col-sm\">\n                <label for=\"formFile\" class=\"form-label\" style=\"text-align: center;\"><b>Upload Distance\n                        Matrix</b></label>\n                <div class=\"row\">\n                    <div class=\"col-sm\">\n                        <form action=\"/upload_file_distance_matrix\" method=\"post\" enctype=\"multipart/form-data\"\n                            target=\"hiddenFrame\" id=\"form_upload_distance_coordinates\">\n                            <input class=\"form-control\" type=\"file\" id=\"upload_distance_coordinates\"\n                                name='uploaded_file'>\n                        </form>\n                    </div>\n                    <div class=\"col-sm\">\n                        <form action=\"/download_distance_template\" ,method=\"get\">\n                            <button type=\"submit\" class=\"btn btn-outline-secondary\">Download Template</button>\n                        </form>\n                    </div>\n                </div>\n\n\n            </div>\n            <div class=\"col-sm\">\n                <label for=\"formFile\" class=\"form-label\"><b>Upload Source Coordinates</b></label>\n                <div class=\"row\">\n                    <div class=\"col-sm\">\n                        <form enctype=\"multipart/form-data\" id=\"form_upload_source_coordinates\" target=\"hiddenFrame\"\n                            action=\"/upload_source_coordinates\" method=\"POST\">\n                            <input class=\"form-control\" type=\"file\" id=\"upload_source_coordinates\" name='uploaded_file'>\n                        </form>\n                    </div>\n                    <div class=\"col-sm\">\n                        <form action=\"/download_source_template\" ,method=\"get\">\n                            <button type=\"submit\" class=\"btn btn-outline-secondary\">Download Template</button>\n                        </form>\n                    </div>\n                </div>\n            </div>\n            <div class=\"col-sm\">\n                <label for=\"formFile\" class=\"form-label\"><b>Upload Destination Coordinates</b></label>\n                <div class=\"row\">\n                    <div class=\"col-sm\">\n                        <form enctype=\"multipart/form-data\" id=\"form_upload_destination_coordinates\"\n                            target=\"hiddenFrame\" action=\"/upload_destination_coordinates\" method=\"POST\">\n\n                            <input class=\"form-control\" type=\"file\" id=\"upload_destination_coordinates\"\n                                name=\"uploaded_file\">\n                        </form>\n                    </div>\n                    <div class=\"col-sm\">\n                        <form action=\"/download_destination_template\" ,method=\"get\">\n                            <button type=\"submit\" class=\"btn btn-outline-secondary\">Download Template</button>\n                        </form>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n\n\n    <div class=\"container\" style=\"padding-top: 2%;\">\n        <div class=\"row\">\n            <div class=\"col-sm\">\n                <b>Choose Objective</b>\n            </div>\n            <div class=\"col-sm\">\n                <div class=\"form-check form-check-inline\">\n                    <input class=\"form-check-input\" type=\"radio\" name=\"minimise_cost\" id=\"minimise_cost\"\n                        value=\"minimise_cost\">\n                    <label class=\"form-check-label\" for=\"inlineRadioObjective\">Minimise Cost</label>\n                </div>\n            </div>\n            <div class=\"col-sm\">\n                <div class=\"form-check form-check-inline\">\n                    <input class=\"form-check-input\" type=\"radio\" name=\"minimise_cost\" id=\"minimise_time\"\n                        value=\"minimise_time\">\n                    <label class=\"form-check-label\" for=\"inlineRadioObjective\">Minimise Time</label>\n                </div>\n            </div>\n        </div>\n    </div>\n\n\n\n    <div class=\"container\" style=\"padding-top: 2%;\">\n        <div class=\"row\">\n            <div class=\"col-sm\">\n                <b>List round-trip distance/time</b>\n            </div>\n            <div class=\"col-sm\">\n                <div class=\"form-check form-check-inline\">\n                    <input class=\"form-check-input\" type=\"radio\" name=\"round_trip\" id=\"inlineRadio1Roundtrip\"\n                        value=\"Yes\" onclick=\"EnableRoundTrip()\">\n                    <label class=\"form-check-label\" for=\"inlineRadio2\">Yes</label>\n                </div>\n            </div>\n            <div class=\"col-sm\">\n                <div class=\"form-check form-check-inline\">\n                    <input class=\"form-check-input\" type=\"radio\" name=\"round_trip\"\n                        id=\"inlineRadio1RoundTripDisable\" value=\"No\" onclick=\"DisableRoundTrip()\">\n                    <label class=\"form-check-label\" for=\"inlineRadio2\">No</label>\n                </div>\n            </div>\n        </div>\n    </div>\n\n    <div class=\"container\" style=\"padding-top: 1.5%;\">\n        <form>\n            <div class=\"row\">\n                <div class=\"col\">\n                    <b><label>Specify atleast one of the following:</label></b>\n                </div>\n                <div class=\"col\">\n                    <!-- <label for=\"inlineGridName\" class=\"sr-only\">Name</label> -->\n                    <input style=\"padding-left: 10%;padding-right: 10%;\" type=\"text\" class=\"form-control\"\n                        id=\"maxTripDistance\" placeholder=\"Max Trip Distance(KM)\">\n                </div>\n                <div class=\"col\">\n                    <!-- <label for=\"inlineGridEmail\" class=\"sr-only\">Email</label> -->\n                    <input style=\"padding-left: 10%;padding-right: 10%;\" type=\"text\" class=\"form-control\"\n                        id=\"maxTripDuration\" placeholder=\"Max Trip Duration(hrs)\" disabled=\"disabled\">\n                </div>\n            </div>\n        </form>\n    </div>\n\n\n\n    <div class=\"container\" style=\"padding-top: 1.5%;\">\n        <form>\n            <div class=\"row\">\n                <div class=\"col\">\n\n\n                    <b><label>Specify destination service time parameters:</label></b>\n                </div>\n                <div class=\"col\">\n                    <!-- <label for=\"inlineGridName\" class=\"sr-only\">Name</label> -->\n                    <input style=\"padding-left: 10%;padding-right: 10%;\" type=\"text\" class=\"form-control\"\n                        id=\"inlineGridNameFixedComponent\" placeholder=\"Fixed Component\">\n                </div>\n                <div class=\"col\">\n                    <label for=\"inlineGridEmail\"><b>Variable Component</b></label>\n\n                </div>\n\n\n                <div class=\"col\">\n                    <div class=\"form-check form-check-inline\">\n                        <input class=\"form-check-input\" type=\"radio\" name=\"variable_component\" id=\"perOrderRadio\"\n                            value=\"option2\" onclick=\"EnablePerOrder()\">\n                        <label class=\"form-check-label\" for=\"perOrderRadio\">per order</label>\n                    </div>\n                    <input style=\"padding-left: 10%;padding-right: 10%;\" type=\"text\" class=\"form-control\" id=\"perOrder\"\n                        placeholder=\"mins\" disabled=\"disabled\">\n                </div>\n                <div class=\"col\">\n                    <div class=\"form-check form-check-inline\">\n                        <input class=\"form-check-input\" type=\"radio\" name=\"variable_component\" id=\"perHandlingUnitRadio\"\n                            value=\"option2\" onclick=\"EnablePerHandlingUnit()\">\n                        <label class=\"form-check-label\" for=\"perHandlingUnitRadio\">per handling unit</label>\n                    </div>\n                    <input style=\"padding-left: 10%;padding-right: 10%;\" type=\"text\" class=\"form-control\"\n                        id=\"perHandlingUnit\" placeholder=\"mins\" disabled=\"disabled\">\n                </div>\n            </div>\n        </form>\n    </div>\n\n\n    <div class=\"container\">\n        <div class=\"row\">\n            <div class=\"col-sm\">\n                <b>Upload Fleet Details</b><i>(vehicle type,no. of vehicles,fixed and variable costs,capacities,avg.\n                    speed and additional characteristics)</i>\n            </div>\n            <div class=\"col-sm\">\n                <form enctype=\"multipart/form-data\" id=\"form_upload_fleet_details\" target=\"hiddenFrame\"\n                    action=\"/upload_fleet_details\" method=\"POST\">\n\n                    <input class=\"form-control\" type=\"file\" id=\"upload_fleet_details\" name=\"uploaded_file\">\n                </form>\n            </div>\n            <div class=\"col-sm\">\n                <form action=\"/download_fleet_template\" ,method=\"get\">\n                    <button type=\"submit\" class=\"btn btn-outline-secondary\">Download Template</button>\n                </form>\n            </div>\n        </div>\n    </div>\n\n\n    <div class=\"container\" style=\"padding-top: 2%;\">\n        <div class=\"row\">\n            <div class=\"col-sm\">\n                <b>Assume infinite fleet size</b><i>(if \"Yes\" no. of vehicles of each type,if specified, will be\n                    ignored)</i>\n            </div>\n            <div class=\"col-sm\">\n                <div class=\"form-check form-check-inline\">\n                    <input class=\"form-check-input\" type=\"radio\" name=\"infinite_fleet_size\" id=\"yes_infinte_fleet_size\"\n                        value=\"option2\">\n                    <label class=\"form-check-label\" for=\"inlineRadio2\">Yes</label>\n                </div>\n            </div>\n            <div class=\"col-sm\">\n                <div class=\"form-check form-check-inline\">\n                    <input class=\"form-check-input\" type=\"radio\" name=\"infinite_fleet_size\" id=\"inlineRadio1\"\n                        value=\"option2\">\n                    <label class=\"form-check-label\" for=\"inlineRadio2\">No</label>\n                </div>\n            </div>\n        </div>\n    </div>\n\n\n    <div class=\"container\" style=\"padding-top: 2%;\">\n        <div class=\"row\">\n            <div class=\"col-sm\">\n                <b>Specify vehicle loading contraints</b><i> (atleast one of the following 3 should be active)</i>\n            </div>\n        </div>\n    </div>\n\n\n    <div class=\"container\">\n        <div class=\"row\">\n            <div class=\"col-sm\">\n                <div class=\"form-check form-switch\">\n                    <input class=\"form-check-input\" type=\"checkbox\" role=\"switch\" id=\"vehicle_weight_capacity\">\n                    <label class=\"form-check-label\" for=\"vehicle_weight_capacity\">Vehicle weight capacity</label>\n                </div>\n            </div>\n            <div class=\"col-sm\">\n                <div class=\"form-check form-switch\">\n                    <input class=\"form-check-input\" type=\"checkbox\" role=\"switch\" id=\"vehicle_volume_capacity\">\n                    <label class=\"form-check-label\" for=\"vehicle_volume_capacity\">Vehicle volumetric capacity</label>\n                </div>\n            </div>\n            <div class=\"col-sm\">\n                <div class=\"form-check form-switch\">\n                    <input class=\"form-check-input\" type=\"checkbox\" role=\"switch\" id=\"vehicle_max_order_count\">\n                    <label class=\"form-check-label\" for=\"vehicle_max_order_count\">Vehicle max order count</label>\n                </div>\n            </div>\n        </div>\n    </div>\n\n\n\n\n    <div class=\"container\" style=\"padding-top:2%;\">\n        <div class=\"row\">\n            <div class=\"col-sm\">\n                <b>Upload vehicle availability times</b><i>(optional,if not specified it will be assumed that all\n                    vehicles are available for the whole day)</i>\n            </div>\n            <div class=\"col-sm\">\n                <form enctype=\"multipart/form-data\" id=\"form_upload_vehicle_availability_times\" target=\"hiddenFrame\"\n                    action=\"/upload_vehicle_availability\" method=\"POST\">\n\n                    <input class=\"form-control\" type=\"file\" id=\"upload_vehicle_availability_times\" name=\"uploaded_file\">\n                </form>\n            </div>\n            <div class=\"col-sm\">\n                <form action=\"/download_vehicle_template\" ,method=\"get\">\n                    <button type=\"submit\" class=\"btn btn-outline-secondary\">Download Template</button>\n                </form>\n            </div>\n        </div>\n    </div>\n\n\n\n    <div class=\"container\" style=\"padding-top:2%;\">\n        <div class=\"row\">\n            <div class=\"col-sm\">\n                <b>Upload order details</b><i>(destination, weight, volume, preferred time window, special vehicle\n                    requirements etc.)</i>\n            </div>\n            <div class=\"col-sm\">\n                <form enctype=\"multipart/form-data\" id=\"form_upload_order_details\" target=\"hiddenFrame\"\n                    action=\"/upload_order_details\" method=\"POST\">\n\n                    <input class=\"form-control\" type=\"file\" id=\"upload_order_details\" name=\"uploaded_file\">\n                </form>\n            </div>\n            <div class=\"col-sm\">\n                <form action=\"/download_order_template\" ,method=\"get\">\n                    <button type=\"submit\" class=\"btn btn-outline-secondary\">Download Template</button>\n                </form>\n            </div>\n        </div>\n    </div>\n\n    <div class=\"container\" style=\"padding-top: 2%;\">\n        <div class=\"row\">\n            <div class=\"col-sm\">\n\n            </div>\n            <div class=\"col-lg\">\n                <button type=\"button\" class=\"btn btn-primary btn-lg btn-block\" onclick=\"GenerateConfig()\"><b>Generate Route Plan</b></button>\n            </div>\n            <div class=\"col-lg\">\n                <form action=\"/view_plan\" ,method=\"get\">\n                    <button type=\"button\" class=\"btn btn-primary btn-lg btn-block\"><b>View/Download Plan</b></button>\n                </form>\n            </div>\n            <div class=\"col-sm\">\n\n            </div>\n        </div>\n    </div>\n\n\n    <!--Jquery Cdn -->\n    <script src=\"https://code.jquery.com/jquery-3.5.1.js\"\n        integrity=\"sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=\" crossorigin=\"anonymous\"></script>\n\n    <!-- <form method=\"post\" id=\"todo-form\">\n        <input type=\"text\" name=\"todo\" id=\"todo\">\n        <button type=\"submit\">submit</button>\n    </form> -->\n\n    <script type=\"text/javascript\">\n        function EnableRoundTrip() {\n            var others = document.getElementById(\"inlineRadio1Roundtrip\");\n            var otherlan = document.getElementById(\"maxTripDuration\");\n            otherlan.disabled = others.checked ? false : true;\n            otherlan.value = \"\";\n            if (!otherlan.disabled) {\n                otherlan.focus();\n            }\n        }\n\n\n        function DisableRoundTrip() {\n            var others = document.getElementById(\"inlineRadio1RoundTripDisable\");\n            var otherlan = document.getElementById(\"maxTripDuration\");\n            otherlan.disabled = others.checked ? true : false;\n            otherlan.value = \"\";\n            if (!otherlan.disabled) {\n                otherlan.focus();\n            }\n        }\n\n\n        function EnablePerOrder() {\n            var others = document.getElementById(\"perOrderRadio\");\n            var otherlan = document.getElementById(\"perOrder\");\n            var otherlan2 = document.getElementById(\"perHandlingUnit\");\n\n            // console.log(otherlan)\n            otherlan.disabled = others.checked ? false : true;\n            otherlan.value = \"\";\n            if (!otherlan.disabled) {\n                otherlan.focus();\n            }\n\n            otherlan2.disabled = others.checked ? true : false;\n            otherlan2.value = \"\";\n            if (!otherlan2.disabled) {\n                otherlan2.focus();\n            }\n        }\n\n        function EnablePerHandlingUnit() {\n            var others = document.getElementById(\"perHandlingUnitRadio\");\n            var otherlan = document.getElementById(\"perHandlingUnit\");\n\n            var otherlan2 = document.getElementById(\"perOrder\");\n\n            // console.log(otherlan)\n            otherlan.disabled = others.checked ? false : true;\n            otherlan.value = \"\";\n            if (!otherlan.disabled) {\n                otherlan.focus();\n            }\n\n            otherlan2.disabled = others.checked ? true : false;\n            otherlan2.value = \"\";\n            if (!otherlan2.disabled) {\n                otherlan2.focus();\n            }\n        }\n\n\n        document.getElementById(\"upload_source_coordinates\").onchange = function () {\n            document.getElementById(\"form_upload_source_coordinates\").submit();\n            console.log(\"source coordinates submitted successfully\")\n\n        };\n\n        document.getElementById(\"upload_distance_coordinates\").onchange = function () {\n            document.getElementById(\"form_upload_distance_coordinates\").submit();\n            console.log(\"source coordinates submitted successfully\")\n\n        };\n\n        document.getElementById(\"upload_destination_coordinates\").onchange = function () {\n            document.getElementById(\"form_upload_destination_coordinates\").submit();\n            console.log(\"destination coordinates submitted successfully\")\n\n        };\n\n        document.getElementById(\"upload_fleet_details\").onchange = function () {\n            document.getElementById(\"form_upload_fleet_details\").submit();\n            console.log(\"fleet details submitted successfully\")\n\n        };\n\n\n        document.getElementById(\"upload_vehicle_availability_times\").onchange = function () {\n            document.getElementById(\"form_upload_vehicle_availability_times\").submit();\n            console.log(\"fleet details submitted successfully\")\n\n        };\n\n\n\n        // function doFunction() {\n        //     const name = document.getElementById(\"upload_vehicle_availability_times\").innerHTML\n\n        //     $.ajax({\n        //         url: '/upload_vehicle_availability',\n        //         type: 'POST',\n        //         data: {\n        //             name: name\n        //         },\n        //         success: function (response) {\n        //         },\n        //         error: function (response) {\n        //         }\n        //     });\n\n        // };\n\n\n\n        document.getElementById(\"upload_order_details\").onchange = function () {\n            document.getElementById(\"form_upload_order_details\").submit();\n            console.log(\"fleet details submitted successfully\")\n\n        };\n\n\n\n        function GenerateConfig() {\n            config = {}\n            objective = {}\n            objective['minimize_cost']=document.getElementById('minimise_cost').checked\n            objective['minimise_time'] =document.getElementById('minimise_time').checked\n\n            config['objective'] = objective\n\n            config[\"limit_distance_time\"] = document.getElementById('inlineRadio1Roundtrip').checked\n\n            maxTripDistance = document.getElementById(\"maxTripDistance\").value\n            maxTripDuration = document.getElementById(\"maxTripDuration\").value\n            limit_distance_time_param = [{\"max_distance_travelled\":maxTripDistance},{\"max_duration_travelled\":maxTripDuration}]\n            \n            config[\"limit_distance_time_param\"] = limit_distance_time_param\n\n            service_time = {}\n            service_time['fixed_componenet'] = document.getElementById('inlineGridNameFixedComponent').value\n            service_time[\"variable\"] = {\n                \"per_order\":document.getElementById(\"perOrder\").value,\n                \"per_handling_unit\":document.getElementById(\"perHandlingUnit\").value\n\n            }\n\n            config['service_time'] = service_time\n            config['infinite_fleet_size'] = document.getElementById(\"yes_infinte_fleet_size\").checked\n\n            config[\"loading_constraint\"] = {\n                 \"vehicle_weight_capacity\": document.getElementById(\"vehicle_weight_capacity\").checked,\n                 \"vehicle_volume_capacity\": document.getElementById(\"vehicle_volume_capacity\").checked,\n                 \"vehicle_order_capacity\":  document.getElementById(\"vehicle_max_order_count\").checked\n            }\n\n            console.log(config) \n\n            $.ajax({\n            url: '/generate_route_plan',\n            type: 'POST',\n            contentType:'application/json',\n            data:JSON.stringify({config}),\n            success: function (response) {\n                console.log(response)\n            },\n            error: function (response) {\n                console.log(response)\n            }\n        });\n\n        }\n\n\n    </script>\n\n\n    <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js\"\n        integrity=\"sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM\"\n        crossorigin=\"anonymous\"></script>\n\n    <iframe name=\"hiddenFrame\" width=\"0\" height=\"0\" border=\"0\" \"></iframe>\n\n</body>\n\n</html>"
+
+Status code: 200
+2023-06-01 12:42:00,411 INFO: User IP Address: 127.0.0.1 
+Method: GET
+Path: /favicon.ico
+Headers: Host: 127.0.0.1:8080
+Connection: keep-alive
+Sec-Ch-Ua: "Google Chrome";v="113", "Chromium";v="113", "Not-A.Brand";v="24"
+Sec-Ch-Ua-Mobile: ?0
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Sec-Ch-Ua-Platform: "Windows"
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://127.0.0.1:8080/route/index
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+
+Request Payload: 
+Response data: {
+  "msg": "Internal Server Error."
+}
+
+Status code: 500
+2023-06-01 12:43:15,027 INFO: User IP Address: 127.0.0.1 
+Method: GET
+Path: /route/index
+Headers: Host: 127.0.0.1:8080
+Connection: keep-alive
+Cache-Control: max-age=0
+Sec-Ch-Ua: "Google Chrome";v="113", "Chromium";v="113", "Not-A.Brand";v="24"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+
+Request Payload: 
+Response data: 
+<html>
+
+<head>
+    <title>Route Optimisation Simulator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <style>
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .switch input {
+            display: none;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        input:checked+.slider {
+            background-color: #2196F3;
+        }
+
+        input:focus+.slider {
+            box-shadow: 0 0 1px #2196F3;
+        }
+
+        input:checked+.slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+        }
+    </style>
+</head>
+
+<body>
+    <h2 style="text-align: center;">ROUTE OPTIMISATION SIMULATOR</h2>
+
+    <!-- <div class="mb-3">
+    <label for="formFile" class="form-label"><b>Upload Distance Matrix</b></label>
+    <input class="form-control" type="file" id="formFile">
+    <button type="button" class="btn btn-primary btn-lg">Large button</button>
+</div> -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <label for="formFile" class="form-label" style="text-align: center;"><b>Upload Distance
+                        Matrix</b></label>
+                <div class="row">
+                    <div class="col-sm">
+                        <form action="/upload_file_distance_matrix" method="post" enctype="multipart/form-data"
+                            target="hiddenFrame" id="form_upload_distance_coordinates">
+                            <input class="form-control" type="file" id="upload_distance_coordinates"
+                                name='uploaded_file'>
+                        </form>
+                    </div>
+                    <div class="col-sm">
+                        <form action="/download_distance_template" ,method="get">
+                            <button type="submit" class="btn btn-outline-secondary">Download Template</button>
+                        </form>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-sm">
+                <label for="formFile" class="form-label"><b>Upload Source Coordinates</b></label>
+                <div class="row">
+                    <div class="col-sm">
+                        <form enctype="multipart/form-data" id="form_upload_source_coordinates" target="hiddenFrame"
+                            action="/upload_source_coordinates" method="POST">
+                            <input class="form-control" type="file" id="upload_source_coordinates" name='uploaded_file'>
+                        </form>
+                    </div>
+                    <div class="col-sm">
+                        <form action="/download_source_template" ,method="get">
+                            <button type="submit" class="btn btn-outline-secondary">Download Template</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <label for="formFile" class="form-label"><b>Upload Destination Coordinates</b></label>
+                <div class="row">
+                    <div class="col-sm">
+                        <form enctype="multipart/form-data" id="form_upload_destination_coordinates"
+                            target="hiddenFrame" action="/upload_destination_coordinates" method="POST">
+
+                            <input class="form-control" type="file" id="upload_destination_coordinates"
+                                name="uploaded_file">
+                        </form>
+                    </div>
+                    <div class="col-sm">
+                        <form action="/download_destination_template" ,method="get">
+                            <button type="submit" class="btn btn-outline-secondary">Download Template</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container" style="padding-top: 2%;">
+        <div class="row">
+            <div class="col-sm">
+                <b>Choose Objective</b>
+            </div>
+            <div class="col-sm">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="minimise_cost" id="minimise_cost"
+                        value="minimise_cost">
+                    <label class="form-check-label" for="inlineRadioObjective">Minimise Cost</label>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="minimise_cost" id="minimise_time"
+                        value="minimise_time">
+                    <label class="form-check-label" for="inlineRadioObjective">Minimise Time</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container" style="padding-top: 2%;">
+        <div class="row">
+            <div class="col-sm">
+                <b>List round-trip distance/time</b>
+            </div>
+            <div class="col-sm">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="round_trip" id="inlineRadio1Roundtrip"
+                        value="Yes" onclick="EnableRoundTrip()">
+                    <label class="form-check-label" for="inlineRadio2">Yes</label>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="round_trip"
+                        id="inlineRadio1RoundTripDisable" value="No" onclick="DisableRoundTrip()">
+                    <label class="form-check-label" for="inlineRadio2">No</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" style="padding-top: 1.5%;">
+        <form>
+            <div class="row">
+                <div class="col">
+                    <b><label>Specify atleast one of the following:</label></b>
+                </div>
+                <div class="col">
+                    <!-- <label for="inlineGridName" class="sr-only">Name</label> -->
+                    <input style="padding-left: 10%;padding-right: 10%;" type="text" class="form-control"
+                        id="maxTripDistance" placeholder="Max Trip Distance(KM)">
+                </div>
+                <div class="col">
+                    <!-- <label for="inlineGridEmail" class="sr-only">Email</label> -->
+                    <input style="padding-left: 10%;padding-right: 10%;" type="text" class="form-control"
+                        id="maxTripDuration" placeholder="Max Trip Duration(hrs)" disabled="disabled">
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+
+    <div class="container" style="padding-top: 1.5%;">
+        <form>
+            <div class="row">
+                <div class="col">
+
+
+                    <b><label>Specify destination service time parameters:</label></b>
+                </div>
+                <div class="col">
+                    <!-- <label for="inlineGridName" class="sr-only">Name</label> -->
+                    <input style="padding-left: 10%;padding-right: 10%;" type="text" class="form-control"
+                        id="inlineGridNameFixedComponent" placeholder="Fixed Component">
+                </div>
+                <div class="col">
+                    <label for="inlineGridEmail"><b>Variable Component</b></label>
+
+                </div>
+
+
+                <div class="col">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="variable_component" id="perOrderRadio"
+                            value="option2" onclick="EnablePerOrder()">
+                        <label class="form-check-label" for="perOrderRadio">per order</label>
+                    </div>
+                    <input style="padding-left: 10%;padding-right: 10%;" type="text" class="form-control" id="perOrder"
+                        placeholder="mins" disabled="disabled">
+                </div>
+                <div class="col">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="variable_component" id="perHandlingUnitRadio"
+                            value="option2" onclick="EnablePerHandlingUnit()">
+                        <label class="form-check-label" for="perHandlingUnitRadio">per handling unit</label>
+                    </div>
+                    <input style="padding-left: 10%;padding-right: 10%;" type="text" class="form-control"
+                        id="perHandlingUnit" placeholder="mins" disabled="disabled">
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <b>Upload Fleet Details</b><i>(vehicle type,no. of vehicles,fixed and variable costs,capacities,avg.
+                    speed and additional characteristics)</i>
+            </div>
+            <div class="col-sm">
+                <form enctype="multipart/form-data" id="form_upload_fleet_details" target="hiddenFrame"
+                    action="/upload_fleet_details" method="POST">
+
+                    <input class="form-control" type="file" id="upload_fleet_details" name="uploaded_file">
+                </form>
+            </div>
+            <div class="col-sm">
+                <form action="/download_fleet_template" ,method="get">
+                    <button type="submit" class="btn btn-outline-secondary">Download Template</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container" style="padding-top: 2%;">
+        <div class="row">
+            <div class="col-sm">
+                <b>Assume infinite fleet size</b><i>(if "Yes" no. of vehicles of each type,if specified, will be
+                    ignored)</i>
+            </div>
+            <div class="col-sm">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="infinite_fleet_size" id="yes_infinte_fleet_size"
+                        value="option2">
+                    <label class="form-check-label" for="inlineRadio2">Yes</label>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="infinite_fleet_size" id="inlineRadio1"
+                        value="option2">
+                    <label class="form-check-label" for="inlineRadio2">No</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container" style="padding-top: 2%;">
+        <div class="row">
+            <div class="col-sm">
+                <b>Specify vehicle loading contraints</b><i> (atleast one of the following 3 should be active)</i>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="vehicle_weight_capacity">
+                    <label class="form-check-label" for="vehicle_weight_capacity">Vehicle weight capacity</label>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="vehicle_volume_capacity">
+                    <label class="form-check-label" for="vehicle_volume_capacity">Vehicle volumetric capacity</label>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="vehicle_max_order_count">
+                    <label class="form-check-label" for="vehicle_max_order_count">Vehicle max order count</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="container" style="padding-top:2%;">
+        <div class="row">
+            <div class="col-sm">
+                <b>Upload vehicle availability times</b><i>(optional,if not specified it will be assumed that all
+                    vehicles are available for the whole day)</i>
+            </div>
+            <div class="col-sm">
+                <form enctype="multipart/form-data" id="form_upload_vehicle_availability_times" target="hiddenFrame"
+                    action="/upload_vehicle_availability" method="POST">
+
+                    <input class="form-control" type="file" id="upload_vehicle_availability_times" name="uploaded_file">
+                </form>
+            </div>
+            <div class="col-sm">
+                <form action="/download_vehicle_template" ,method="get">
+                    <button type="submit" class="btn btn-outline-secondary">Download Template</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container" style="padding-top:2%;">
+        <div class="row">
+            <div class="col-sm">
+                <b>Upload order details</b><i>(destination, weight, volume, preferred time window, special vehicle
+                    requirements etc.)</i>
+            </div>
+            <div class="col-sm">
+                <form enctype="multipart/form-data" id="form_upload_order_details" target="hiddenFrame"
+                    action="/upload_order_details" method="POST">
+
+                    <input class="form-control" type="file" id="upload_order_details" name="uploaded_file">
+                </form>
+            </div>
+            <div class="col-sm">
+                <form action="/download_order_template" ,method="get">
+                    <button type="submit" class="btn btn-outline-secondary">Download Template</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" style="padding-top: 2%;">
+        <div class="row">
+            <div class="col-sm">
+
+            </div>
+            <div class="col-lg">
+                <button type="button" class="btn btn-primary btn-lg btn-block" onclick="GenerateConfig()"><b>Generate Route Plan</b></button>
+            </div>
+            <div class="col-lg">
+                <form action="/view_plan" ,method="get">
+                    <button type="button" class="btn btn-primary btn-lg btn-block"><b>View/Download Plan</b></button>
+                </form>
+            </div>
+            <div class="col-sm">
+
+            </div>
+        </div>
+    </div>
+
+
+    <!--Jquery Cdn -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+    <!-- <form method="post" id="todo-form">
+        <input type="text" name="todo" id="todo">
+        <button type="submit">submit</button>
+    </form> -->
+
+    <script type="text/javascript">
+        function EnableRoundTrip() {
+            var others = document.getElementById("inlineRadio1Roundtrip");
+            var otherlan = document.getElementById("maxTripDuration");
+            otherlan.disabled = others.checked ? false : true;
+            otherlan.value = "";
+            if (!otherlan.disabled) {
+                otherlan.focus();
+            }
+        }
+
+
+        function DisableRoundTrip() {
+            var others = document.getElementById("inlineRadio1RoundTripDisable");
+            var otherlan = document.getElementById("maxTripDuration");
+            otherlan.disabled = others.checked ? true : false;
+            otherlan.value = "";
+            if (!otherlan.disabled) {
+                otherlan.focus();
+            }
+        }
+
+
+        function EnablePerOrder() {
+            var others = document.getElementById("perOrderRadio");
+            var otherlan = document.getElementById("perOrder");
+            var otherlan2 = document.getElementById("perHandlingUnit");
+
+            // console.log(otherlan)
+            otherlan.disabled = others.checked ? false : true;
+            otherlan.value = "";
+            if (!otherlan.disabled) {
+                otherlan.focus();
+            }
+
+            otherlan2.disabled = others.checked ? true : false;
+            otherlan2.value = "";
+            if (!otherlan2.disabled) {
+                otherlan2.focus();
+            }
+        }
+
+        function EnablePerHandlingUnit() {
+            var others = document.getElementById("perHandlingUnitRadio");
+            var otherlan = document.getElementById("perHandlingUnit");
+
+            var otherlan2 = document.getElementById("perOrder");
+
+            // console.log(otherlan)
+            otherlan.disabled = others.checked ? false : true;
+            otherlan.value = "";
+            if (!otherlan.disabled) {
+                otherlan.focus();
+            }
+
+            otherlan2.disabled = others.checked ? true : false;
+            otherlan2.value = "";
+            if (!otherlan2.disabled) {
+                otherlan2.focus();
+            }
+        }
+
+
+        document.getElementById("upload_source_coordinates").onchange = function () {
+            document.getElementById("form_upload_source_coordinates").submit();
+            console.log("source coordinates submitted successfully")
+
+        };
+
+        document.getElementById("upload_distance_coordinates").onchange = function () {
+            document.getElementById("form_upload_distance_coordinates").submit();
+            console.log("source coordinates submitted successfully")
+
+        };
+
+        document.getElementById("upload_destination_coordinates").onchange = function () {
+            document.getElementById("form_upload_destination_coordinates").submit();
+            console.log("destination coordinates submitted successfully")
+
+        };
+
+        document.getElementById("upload_fleet_details").onchange = function () {
+            document.getElementById("form_upload_fleet_details").submit();
+            console.log("fleet details submitted successfully")
+
+        };
+
+
+        document.getElementById("upload_vehicle_availability_times").onchange = function () {
+            document.getElementById("form_upload_vehicle_availability_times").submit();
+            console.log("fleet details submitted successfully")
+
+        };
+
+
+
+        // function doFunction() {
+        //     const name = document.getElementById("upload_vehicle_availability_times").innerHTML
+
+        //     $.ajax({
+        //         url: '/upload_vehicle_availability',
+        //         type: 'POST',
+        //         data: {
+        //             name: name
+        //         },
+        //         success: function (response) {
+        //         },
+        //         error: function (response) {
+        //         }
+        //     });
+
+        // };
+
+
+
+        document.getElementById("upload_order_details").onchange = function () {
+            document.getElementById("form_upload_order_details").submit();
+            console.log("fleet details submitted successfully")
+
+        };
+
+
+
+        function GenerateConfig() {
+            config = {}
+            objective = {}
+            objective['minimize_cost']=document.getElementById('minimise_cost').checked
+            objective['minimise_time'] =document.getElementById('minimise_time').checked
+
+            config['objective'] = objective
+
+            config["limit_distance_time"] = document.getElementById('inlineRadio1Roundtrip').checked
+
+            maxTripDistance = document.getElementById("maxTripDistance").value
+            maxTripDuration = document.getElementById("maxTripDuration").value
+            limit_distance_time_param = [{"max_distance_travelled":maxTripDistance},{"max_duration_travelled":maxTripDuration}]
+            
+            config["limit_distance_time_param"] = limit_distance_time_param
+
+            service_time = {}
+            service_time['fixed_componenet'] = document.getElementById('inlineGridNameFixedComponent').value
+            service_time["variable"] = {
+                "per_order":document.getElementById("perOrder").value,
+                "per_handling_unit":document.getElementById("perHandlingUnit").value
+
+            }
+
+            config['service_time'] = service_time
+            config['infinite_fleet_size'] = document.getElementById("yes_infinte_fleet_size").checked
+
+            config["loading_constraint"] = {
+                 "vehicle_weight_capacity": document.getElementById("vehicle_weight_capacity").checked,
+                 "vehicle_volume_capacity": document.getElementById("vehicle_volume_capacity").checked,
+                 "vehicle_order_capacity":  document.getElementById("vehicle_max_order_count").checked
+            }
+
+            console.log(config) 
+
+            $.ajax({
+            url: '/generate_route_plan',
+            type: 'POST',
+            contentType:'application/json',
+            data:JSON.stringify({config}),
+            success: function (response) {
+                console.log(response)
+            },
+            error: function (response) {
+                console.log(response)
+            }
+        });
+
+        }
+
+
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <iframe name="hiddenFrame" width="0" height="0" border="0" "></iframe>
+
+</body>
+
+</html>
+Status code: 200
+2023-06-01 12:43:15,186 INFO: User IP Address: 127.0.0.1 
+Method: GET
+Path: /favicon.ico
+Headers: Host: 127.0.0.1:8080
+Connection: keep-alive
+Sec-Ch-Ua: "Google Chrome";v="113", "Chromium";v="113", "Not-A.Brand";v="24"
+Sec-Ch-Ua-Mobile: ?0
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Sec-Ch-Ua-Platform: "Windows"
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://127.0.0.1:8080/route/index
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+
+Request Payload: 
+Response data: {
+  "msg": "Internal Server Error."
+}
+
+Status code: 500

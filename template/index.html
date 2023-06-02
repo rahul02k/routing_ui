@@ -1,0 +1,581 @@
+
+<html>
+
+<head>
+    <title>Route Optimisation Simulator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <style>
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .switch input {
+            display: none;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        input:checked+.slider {
+            background-color: #2196F3;
+        }
+
+        input:focus+.slider {
+            box-shadow: 0 0 1px #2196F3;
+        }
+
+        input:checked+.slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+        }
+    </style>
+</head>
+
+<body>
+    <h2 style="text-align: center;">ROUTE OPTIMISATION SIMULATOR</h2>
+
+    <!-- <div class="mb-3">
+    <label for="formFile" class="form-label"><b>Upload Distance Matrix</b></label>
+    <input class="form-control" type="file" id="formFile">
+    <button type="button" class="btn btn-primary btn-lg">Large button</button>
+</div> -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <label for="formFile" class="form-label" style="text-align: center;"><b>Upload Distance
+                        Matrix</b></label>
+                <div class="row">
+                    <div class="col-sm">
+                        <form action="/upload_file_distance_matrix" method="post" enctype="multipart/form-data"
+                            target="hiddenFrame" id="form_upload_distance_coordinates">
+                            <input class="form-control" type="file" id="upload_distance_coordinates"
+                                name='uploaded_file'>
+                        </form>
+                    </div>
+                    <div class="col-sm">
+                        <form action="/download_distance_template" ,method="get">
+                            <button type="submit" class="btn btn-outline-secondary">Download Template</button>
+                        </form>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-sm">
+                <label for="formFile" class="form-label"><b>Upload Source Coordinates</b></label>
+                <div class="row">
+                    <div class="col-sm">
+                        <form enctype="multipart/form-data" id="form_upload_source_coordinates" target="hiddenFrame"
+                            action="/upload_source_coordinates" method="POST">
+                            <input class="form-control" type="file" id="upload_source_coordinates" name='uploaded_file'>
+                        </form>
+                    </div>
+                    <div class="col-sm">
+                        <form action="/download_source_template" ,method="get">
+                            <button type="submit" class="btn btn-outline-secondary">Download Template</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <label for="formFile" class="form-label"><b>Upload Destination Coordinates</b></label>
+                <div class="row">
+                    <div class="col-sm">
+                        <form enctype="multipart/form-data" id="form_upload_destination_coordinates"
+                            target="hiddenFrame" action="/upload_destination_coordinates" method="POST">
+
+                            <input class="form-control" type="file" id="upload_destination_coordinates"
+                                name="uploaded_file">
+                        </form>
+                    </div>
+                    <div class="col-sm">
+                        <form action="/download_destination_template" ,method="get">
+                            <button type="submit" class="btn btn-outline-secondary">Download Template</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container" style="padding-top: 2%;">
+        <div class="row">
+            <div class="col-sm">
+                <b>Choose Objective</b>
+            </div>
+            <div class="col-sm">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="minimise_cost" id="minimise_cost"
+                        value="minimise_cost">
+                    <label class="form-check-label" for="inlineRadioObjective">Minimise Cost</label>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="minimise_cost" id="minimise_time"
+                        value="minimise_time">
+                    <label class="form-check-label" for="inlineRadioObjective">Minimise Time</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container" style="padding-top: 2%;">
+        <div class="row">
+            <div class="col-sm">
+                <b>List round-trip distance/time</b>
+            </div>
+            <div class="col-sm">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="round_trip" id="inlineRadio1Roundtrip"
+                        value="Yes" onclick="EnableRoundTrip()">
+                    <label class="form-check-label" for="inlineRadio2">Yes</label>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="round_trip"
+                        id="inlineRadio1RoundTripDisable" value="No" onclick="DisableRoundTrip()">
+                    <label class="form-check-label" for="inlineRadio2">No</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" style="padding-top: 1.5%;">
+        <form>
+            <div class="row">
+                <div class="col">
+                    <b><label>Specify atleast one of the following:</label></b>
+                </div>
+                <div class="col">
+                    <!-- <label for="inlineGridName" class="sr-only">Name</label> -->
+                    <input style="padding-left: 10%;padding-right: 10%;" type="text" class="form-control"
+                        id="maxTripDistance" placeholder="Max Trip Distance(KM)">
+                </div>
+                <div class="col">
+                    <!-- <label for="inlineGridEmail" class="sr-only">Email</label> -->
+                    <input style="padding-left: 10%;padding-right: 10%;" type="text" class="form-control"
+                        id="maxTripDuration" placeholder="Max Trip Duration(hrs)" disabled="disabled">
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+
+    <div class="container" style="padding-top: 1.5%;">
+        <form>
+            <div class="row">
+                <div class="col">
+
+
+                    <b><label>Specify destination service time parameters:</label></b>
+                </div>
+                <div class="col">
+                    <!-- <label for="inlineGridName" class="sr-only">Name</label> -->
+                    <input style="padding-left: 10%;padding-right: 10%;" type="text" class="form-control"
+                        id="inlineGridNameFixedComponent" placeholder="Fixed Component">
+                </div>
+                <div class="col">
+                    <label for="inlineGridEmail"><b>Variable Component</b></label>
+
+                </div>
+
+
+                <div class="col">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="variable_component" id="perOrderRadio"
+                            value="option2" onclick="EnablePerOrder()">
+                        <label class="form-check-label" for="perOrderRadio">per order</label>
+                    </div>
+                    <input style="padding-left: 10%;padding-right: 10%;" type="text" class="form-control" id="perOrder"
+                        placeholder="mins" disabled="disabled">
+                </div>
+                <div class="col">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="variable_component" id="perHandlingUnitRadio"
+                            value="option2" onclick="EnablePerHandlingUnit()">
+                        <label class="form-check-label" for="perHandlingUnitRadio">per handling unit</label>
+                    </div>
+                    <input style="padding-left: 10%;padding-right: 10%;" type="text" class="form-control"
+                        id="perHandlingUnit" placeholder="mins" disabled="disabled">
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <b>Upload Fleet Details</b><i>(vehicle type,no. of vehicles,fixed and variable costs,capacities,avg.
+                    speed and additional characteristics)</i>
+            </div>
+            <div class="col-sm">
+                <form enctype="multipart/form-data" id="form_upload_fleet_details" target="hiddenFrame"
+                    action="/upload_fleet_details" method="POST">
+
+                    <input class="form-control" type="file" id="upload_fleet_details" name="uploaded_file">
+                </form>
+            </div>
+            <div class="col-sm">
+                <form action="/download_fleet_template" ,method="get">
+                    <button type="submit" class="btn btn-outline-secondary">Download Template</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container" style="padding-top: 2%;">
+        <div class="row">
+            <div class="col-sm">
+                <b>Assume infinite fleet size</b><i>(if "Yes" no. of vehicles of each type,if specified, will be
+                    ignored)</i>
+            </div>
+            <div class="col-sm">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="infinite_fleet_size" id="yes_infinte_fleet_size"
+                        value="option2">
+                    <label class="form-check-label" for="inlineRadio2">Yes</label>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="infinite_fleet_size" id="inlineRadio1"
+                        value="option2">
+                    <label class="form-check-label" for="inlineRadio2">No</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container" style="padding-top: 2%;">
+        <div class="row">
+            <div class="col-sm">
+                <b>Specify vehicle loading contraints</b><i> (atleast one of the following 3 should be active)</i>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="vehicle_weight_capacity">
+                    <label class="form-check-label" for="vehicle_weight_capacity">Vehicle weight capacity</label>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="vehicle_volume_capacity">
+                    <label class="form-check-label" for="vehicle_volume_capacity">Vehicle volumetric capacity</label>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="vehicle_max_order_count">
+                    <label class="form-check-label" for="vehicle_max_order_count">Vehicle max order count</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="container" style="padding-top:2%;">
+        <div class="row">
+            <div class="col-sm">
+                <b>Upload vehicle availability times</b><i>(optional,if not specified it will be assumed that all
+                    vehicles are available for the whole day)</i>
+            </div>
+            <div class="col-sm">
+                <form enctype="multipart/form-data" id="form_upload_vehicle_availability_times" target="hiddenFrame"
+                    action="/upload_vehicle_availability" method="POST">
+
+                    <input class="form-control" type="file" id="upload_vehicle_availability_times" name="uploaded_file">
+                </form>
+            </div>
+            <div class="col-sm">
+                <form action="/download_vehicle_template" ,method="get">
+                    <button type="submit" class="btn btn-outline-secondary">Download Template</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container" style="padding-top:2%;">
+        <div class="row">
+            <div class="col-sm">
+                <b>Upload order details</b><i>(destination, weight, volume, preferred time window, special vehicle
+                    requirements etc.)</i>
+            </div>
+            <div class="col-sm">
+                <form enctype="multipart/form-data" id="form_upload_order_details" target="hiddenFrame"
+                    action="/upload_order_details" method="POST">
+
+                    <input class="form-control" type="file" id="upload_order_details" name="uploaded_file">
+                </form>
+            </div>
+            <div class="col-sm">
+                <form action="/download_order_template" ,method="get">
+                    <button type="submit" class="btn btn-outline-secondary">Download Template</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" style="padding-top: 2%;">
+        <div class="row">
+            <div class="col-sm">
+
+            </div>
+            <div class="col-lg">
+                <button type="button" class="btn btn-primary btn-lg btn-block" onclick="GenerateConfig()"><b>Generate Route Plan</b></button>
+            </div>
+            <div class="col-lg">
+                <form action="/view_plan" ,method="get">
+                    <button type="button" class="btn btn-primary btn-lg btn-block"><b>View/Download Plan</b></button>
+                </form>
+            </div>
+            <div class="col-sm">
+
+            </div>
+        </div>
+    </div>
+
+
+    <!--Jquery Cdn -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+    <!-- <form method="post" id="todo-form">
+        <input type="text" name="todo" id="todo">
+        <button type="submit">submit</button>
+    </form> -->
+
+    <script type="text/javascript">
+        function EnableRoundTrip() {
+            var others = document.getElementById("inlineRadio1Roundtrip");
+            var otherlan = document.getElementById("maxTripDuration");
+            otherlan.disabled = others.checked ? false : true;
+            otherlan.value = "";
+            if (!otherlan.disabled) {
+                otherlan.focus();
+            }
+        }
+
+
+        function DisableRoundTrip() {
+            var others = document.getElementById("inlineRadio1RoundTripDisable");
+            var otherlan = document.getElementById("maxTripDuration");
+            otherlan.disabled = others.checked ? true : false;
+            otherlan.value = "";
+            if (!otherlan.disabled) {
+                otherlan.focus();
+            }
+        }
+
+
+        function EnablePerOrder() {
+            var others = document.getElementById("perOrderRadio");
+            var otherlan = document.getElementById("perOrder");
+            var otherlan2 = document.getElementById("perHandlingUnit");
+
+            // console.log(otherlan)
+            otherlan.disabled = others.checked ? false : true;
+            otherlan.value = "";
+            if (!otherlan.disabled) {
+                otherlan.focus();
+            }
+
+            otherlan2.disabled = others.checked ? true : false;
+            otherlan2.value = "";
+            if (!otherlan2.disabled) {
+                otherlan2.focus();
+            }
+        }
+
+        function EnablePerHandlingUnit() {
+            var others = document.getElementById("perHandlingUnitRadio");
+            var otherlan = document.getElementById("perHandlingUnit");
+
+            var otherlan2 = document.getElementById("perOrder");
+
+            // console.log(otherlan)
+            otherlan.disabled = others.checked ? false : true;
+            otherlan.value = "";
+            if (!otherlan.disabled) {
+                otherlan.focus();
+            }
+
+            otherlan2.disabled = others.checked ? true : false;
+            otherlan2.value = "";
+            if (!otherlan2.disabled) {
+                otherlan2.focus();
+            }
+        }
+
+
+        document.getElementById("upload_source_coordinates").onchange = function () {
+            document.getElementById("form_upload_source_coordinates").submit();
+            console.log("source coordinates submitted successfully")
+
+        };
+
+        document.getElementById("upload_distance_coordinates").onchange = function () {
+            document.getElementById("form_upload_distance_coordinates").submit();
+            console.log("source coordinates submitted successfully")
+
+        };
+
+        document.getElementById("upload_destination_coordinates").onchange = function () {
+            document.getElementById("form_upload_destination_coordinates").submit();
+            console.log("destination coordinates submitted successfully")
+
+        };
+
+        document.getElementById("upload_fleet_details").onchange = function () {
+            document.getElementById("form_upload_fleet_details").submit();
+            console.log("fleet details submitted successfully")
+
+        };
+
+
+        document.getElementById("upload_vehicle_availability_times").onchange = function () {
+            document.getElementById("form_upload_vehicle_availability_times").submit();
+            console.log("fleet details submitted successfully")
+
+        };
+
+
+
+        // function doFunction() {
+        //     const name = document.getElementById("upload_vehicle_availability_times").innerHTML
+
+        //     $.ajax({
+        //         url: '/upload_vehicle_availability',
+        //         type: 'POST',
+        //         data: {
+        //             name: name
+        //         },
+        //         success: function (response) {
+        //         },
+        //         error: function (response) {
+        //         }
+        //     });
+
+        // };
+
+
+
+        document.getElementById("upload_order_details").onchange = function () {
+            document.getElementById("form_upload_order_details").submit();
+            console.log("fleet details submitted successfully")
+
+        };
+
+
+
+        function GenerateConfig() {
+            config = {}
+            objective = {}
+            objective['minimize_cost']=document.getElementById('minimise_cost').checked
+            objective['minimise_time'] =document.getElementById('minimise_time').checked
+
+            config['objective'] = objective
+
+            config["limit_distance_time"] = document.getElementById('inlineRadio1Roundtrip').checked
+
+            maxTripDistance = document.getElementById("maxTripDistance").value
+            maxTripDuration = document.getElementById("maxTripDuration").value
+            limit_distance_time_param = [{"max_distance_travelled":maxTripDistance},{"max_duration_travelled":maxTripDuration}]
+            
+            config["limit_distance_time_param"] = limit_distance_time_param
+
+            service_time = {}
+            service_time['fixed_componenet'] = document.getElementById('inlineGridNameFixedComponent').value
+            service_time["variable"] = {
+                "per_order":document.getElementById("perOrder").value,
+                "per_handling_unit":document.getElementById("perHandlingUnit").value
+
+            }
+
+            config['service_time'] = service_time
+            config['infinite_fleet_size'] = document.getElementById("yes_infinte_fleet_size").checked
+
+            config["loading_constraint"] = {
+                 "vehicle_weight_capacity": document.getElementById("vehicle_weight_capacity").checked,
+                 "vehicle_volume_capacity": document.getElementById("vehicle_volume_capacity").checked,
+                 "vehicle_order_capacity":  document.getElementById("vehicle_max_order_count").checked
+            }
+
+            console.log(config) 
+
+            $.ajax({
+            url: '/generate_route_plan',
+            type: 'POST',
+            contentType:'application/json',
+            data:JSON.stringify({config}),
+            success: function (response) {
+                console.log(response)
+            },
+            error: function (response) {
+                console.log(response)
+            }
+        });
+
+        }
+
+
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <iframe name="hiddenFrame" width="0" height="0" border="0" "></iframe>
+
+</body>
+
+</html>
