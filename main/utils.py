@@ -98,22 +98,22 @@ def get_data_from_request_or_raise_validation_error(validator_schema: type, data
     return data
 
 
-def log_user_access(response):
-    """
-    This function is used by the flask app server to log each and every request in access_logger
-    :param response:
-    :return:
-    """
-    access_logger.info(
-        f"User IP Address: {request.remote_addr} \n"
-        f"Method: {request.method}\n"
-        f"Path: {request.path}\n"
-        f"Headers: {request.headers}"
-        f"Request Payload: {request.get_data(as_text=True)}\n"
-        f"Response data: {response.get_data(as_text=True)}\n"
-        f"Status code: {response.status_code}"
-    )
-    return response
+# def log_user_access(response):
+#     """
+#     This function is used by the flask app server to log each and every request in access_logger
+#     :param response:
+#     :return:
+#     """
+#     access_logger.info(
+#         f"User IP Address: {request.remote_addr} \n"
+#         f"Method: {request.method}\n"
+#         f"Path: {request.path}\n"
+#         f"Headers: {request.headers}"
+#         f"Request Payload: {request.get_data(as_text=True)}\n"
+#         f"Response data: {response.get_data(as_text=True)}\n"
+#         f"Status code: {response.status_code}"
+#     )
+#     return response
 
 
 def add_filters_using_mapping(model: type, conditions: dict, filters: list, operator_key: str):
