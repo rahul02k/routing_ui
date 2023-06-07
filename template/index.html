@@ -2,6 +2,9 @@
 <html>
 
 <head>
+    <link rel="icon" href="data:,">
+
+
     <title>Route Optimisation Simulator</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -83,7 +86,7 @@
                         </form>
                     </div>
                     <div class="col-sm">
-                        <form action="/download_distance_template" ,method="get">
+                        <form action="/route/download_distance_template" ,method="get">
                             <button type="submit" class="btn btn-outline-secondary">Download Template</button>
                         </form>
                     </div>
@@ -101,7 +104,7 @@
                         </form>
                     </div>
                     <div class="col-sm">
-                        <form action="/download_source_template" ,method="get">
+                        <form action="/route/download_source_template" ,method="get">
                             <button type="submit" class="btn btn-outline-secondary">Download Template</button>
                         </form>
                     </div>
@@ -119,7 +122,7 @@
                         </form>
                     </div>
                     <div class="col-sm">
-                        <form action="/download_destination_template" ,method="get">
+                        <form action="/route/download_destination_template" ,method="get">
                             <button type="submit" class="btn btn-outline-secondary">Download Template</button>
                         </form>
                     </div>
@@ -253,7 +256,7 @@
                 </form>
             </div>
             <div class="col-sm">
-                <form action="/download_fleet_template" ,method="get">
+                <form action="/route/download_fleet_template" ,method="get">
                     <button type="submit" class="btn btn-outline-secondary">Download Template</button>
                 </form>
             </div>
@@ -334,7 +337,7 @@
                 </form>
             </div>
             <div class="col-sm">
-                <form action="/download_vehicle_template" ,method="get">
+                <form action="/route/download_vehicle_template" ,method="get">
                     <button type="submit" class="btn btn-outline-secondary">Download Template</button>
                 </form>
             </div>
@@ -357,7 +360,7 @@
                 </form>
             </div>
             <div class="col-sm">
-                <form action="/download_order_template" ,method="get">
+                <form action="/route/download_order_template" ,method="get">
                     <button type="submit" class="btn btn-outline-secondary">Download Template</button>
                 </form>
             </div>
@@ -552,7 +555,7 @@
             console.log(config) 
 
             $.ajax({
-            url: '/generate_route_plan',
+            url: '/route/generate_route_plan',
             type: 'POST',
             contentType:'application/json',
             data:JSON.stringify({config}),
